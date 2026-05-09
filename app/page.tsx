@@ -1,5 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa";
+import { MdOutlineComputer } from "react-icons/md";
+import { LuBrainCircuit } from "react-icons/lu";
 import Languages from "@/components/Languages";
 export default function Home() {
    const [darkMode, setDarkMode] = useState(true);
@@ -110,7 +114,7 @@ export default function Home() {
     
     <div className="w-72 h-72 rounded-full overflow-hidden">
       <img 
-        src={"Poja shri.png"} 
+        src={"Poja shri.jpeg"} 
         className="w-full h-full object-cover"
         alt="Poja Shri"
       />
@@ -180,7 +184,7 @@ export default function Home() {
               position: "AI & DS Intern",
               company: "Zeptoware Systems",
               date: "Dec 2025 - Jan 2026",
-              icon: "🤖",
+              icon: <LuBrainCircuit />,
               contribution:
                 "Built NLP-based Fake Job Detection System using ML and Deep Learning.",
             },
@@ -188,7 +192,7 @@ export default function Home() {
               position: "Frontend Developer Intern",
               company: "Parkqwik Pvt. Ltd.",
               date: "Jun 2025 - Jul 2025",
-              icon: "💻",
+              icon: <MdOutlineComputer />,
               contribution:
                 "Designed and developed 5+ responsive UI components using HTML, CSS, and JavaScript.",
             },
@@ -196,7 +200,7 @@ export default function Home() {
               position: "Data Science Intern",
               company: "Nexila Technologies",
               date: "Dec 2024 - Jan 2025",
-              icon: "📊",
+              icon: <FaDatabase />,
               contribution:
                 "Worked on machine learning models, data cleaning, and predictive analytics.",
             },
@@ -296,35 +300,53 @@ export default function Home() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "DocMind AI",
-              desc: "Built an AI-powered document intelligence platform using LLMs + RAG for answering questions from uploaded PDFs and documents.",
-            },
-            {
-              title: "Fake Job Detection",
-              desc: "Built end-to-end NLP pipeline and benchmarked 4 models with 18% reduction in false positives.",
-            },
-            {
-              title: "Heart Disease Prediction",
-              desc: "Achieved 92% accuracy using ML models with cross-validation and feature normalization.",
-            },
-            {
-              title: "Employee Performance Prediction",
-              desc: "Built Streamlit app for predicting employee performance using HR metrics.",
-            },
-          ].map((project) => (
-            <div
-              key={project.title}
-              className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg hover:scale-105 transition"
-            >
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
+         {[
+  {
+    title: "DocMind AI",
+    desc: "Built an AI-powered document intelligence platform using LLMs + RAG for answering questions from uploaded PDFs and documents.",
+    github: "https://github.com/PojashriJM/DocMindAI",
+  },
+  {
+    title: "Fake Job Detection",
+    desc: "Built end-to-end NLP pipeline and benchmarked 4 models with 18% reduction in false positives.",
+    github: "https://github.com/PojashriJM/FakeJobDetection",
+  },
+  {
+    title: "Heart Disease Prediction",
+    desc: "Achieved 92% accuracy using ML models with cross-validation and feature normalization.",
+    github: "https://github.com/PojashriJM/HeartDiseasePrediction",
+  },
+  {
+    title: "Employee Performance Prediction",
+    desc: "Built Streamlit app for predicting employee performance using HR metrics.",
+    github: "https://github.com/PojashriJM/EmployeePerformancePrediction",
+  },
+].map((project) => (
+  <div
+    key={project.title}
+    className="relative bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg hover:scale-105 transition"
+  >
 
-              <p className="text-[#5A3147] dark:text-[#D9CCD4]">
-                {project.desc}
-              </p>
-            </div>
-          ))}
+    {/* GitHub Icon */}
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute top-5 right-5 text-2xl text-[#C43C88] dark:text-[#E164A8] hover:scale-125 transition"
+    >
+      <FaGithub />
+    </a>
+
+    <h3 className="text-2xl font-bold mb-3">
+      {project.title}
+    </h3>
+
+    <p className="text-[#5A3147] dark:text-[#D9CCD4]">
+      {project.desc}
+    </p>
+
+  </div>
+))}
         </div>
       </section>
    <section className="py-24 relative overflow-hidden">
@@ -341,92 +363,92 @@ export default function Home() {
     <div className="flex w-max gap-6 animate-marquee pause-animation">
 
       {[...[
-        {
-          title: "TNWISE Women Hackathon",
-          img: "/cert1.jpeg",
-          desc: "Built innovative AI solution during hackathon."
-        },
-        {
-          title: "AIWS Women Hackathon",
-          img: "/cert2.png",
-          desc: "Hands-on training in Machine Learning."
-        },
-        {
-          title: "EY International Techkathon",
-          img: "/cert3.png",
-          desc: "Completed Machine Learning course."
-        },
-        {
-          title: "International Conference IETE",
-          img: "/conference.jpeg",
-          desc: "Participated in national-level event."
-        },
-        {
-          title: "Science Expo",
-          img: "/scienceexpo.jpeg",
-          desc: "Presented innovative ideas in science exhibition."
-        },
-        {
-          title: "AI Agents Workshop",
-          img: "/workshop1.jpeg",
-          desc: "Attended hands-on technical workshop."
-        },
-        {
-          title: "IOT Workshop",
-          img: "/workshop2.jpeg",
-          desc: "Explored AI tools and applications."
-        },
-        {
-          title: "Langchain Workshop",
-          img: "/workshop3.png",
-          desc: "Completed skill-based training session."
-        }
-      ],
+  {
+    title: "TNWISE Women Hackathon",
+    img: "/cert1.jpeg",
+    desc: "Participated in the TNWISE Women Hackathon held at Rajalakshmi Engineering College and advanced to Round 2 among shortlisted teams."
+  },
+  {
+    title: "AIWS Women Hackathon",
+    img: "/cert2.png",
+    desc: "Participated in the All India Women Start-a-thon and advanced to Round 2 by presenting innovative problem-solving ideas."
+  },
+  {
+    title: "EY International Techkathon",
+    img: "/cert3.png",
+    desc: "Participated in the EY International Techathon and advanced to Round 2 in a competitive technical challenge."
+  },
+  {
+    title: "International Conference IETE",
+    img: "/conference.jpeg",
+    desc: "Participated in an international conference conducted by IETE, gaining exposure to emerging technologies and research discussions."
+  },
+  {
+    title: "Science Expo",
+    img: "/scienceexpo.jpeg",
+    desc: "Presented an Offline Voice Assistant project at a science expo, demonstrating AI and voice recognition concepts."
+  },
+  {
+    title: "AI Agents Workshop",
+    img: "/workshop1.jpeg",
+    desc: "Attended an AI Agents workshop conducted by Parkqwik, exploring intelligent AI agent concepts and applications."
+  },
+  {
+    title: "IOT Workshop",
+    img: "/workshop2.jpeg",
+    desc: "Completed an offline IoT workshop conducted by PanTech E-Learning with practical sensor training experience."
+  },
+  {
+    title: "Langchain Workshop",
+    img: "/workshop3.png",
+    desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts."
+  }
+],
       ...[
-        {
-          title: "TNWISE Women Hackathon",
-          img: "/cert1.jpeg",
-          desc: "Built innovative AI solution during hackathon."
-        },
-        {
-          title: "AIWS Women Hackathon",
-          img: "/cert2.png",
-          desc: "Hands-on training in Machine Learning."
-        },
-        {
-          title: "EY International Techkathon",
-          img: "/cert3.png",
-          desc: "Completed Machine Learning course."
-        },
-        {
-          title: "International Conference IETE",
-          img: "/conference.jpeg",
-          desc: "Participated in national-level event."
-        },
-        {
-          title: "Science Expo",
-          img: "/scienceexpo.jpeg",
-          desc: "Presented innovative ideas in science exhibition."
-        },
-        {
-          title: "AI Agents Workshop",
-          img: "/workshop1.jpeg",
-          desc: "Attended hands-on technical workshop."
-        },
-        {
-          title: "IOT Workshop",
-          img: "/workshop2.jpeg",
-          desc: "Explored AI tools and applications."
-        },
-        {
-          title: "Langchain Workshop",
-          img: "/workshop3.png",
-          desc: "Completed skill-based training session."
-        }
-      ]].map((item, index) => (
+  {
+    title: "TNWISE Women Hackathon",
+    img: "/cert1.jpeg",
+    desc: "Participated in the TNWISE Women Hackathon held at Rajalakshmi Engineering College and advanced to Round 2 among shortlisted teams."
+  },
+  {
+    title: "AIWS Women Hackathon",
+    img: "/cert2.png",
+    desc: "Participated in the All India Women Start-a-thon and advanced to Round 2 by presenting innovative problem-solving ideas."
+  },
+  {
+    title: "EY International Techkathon",
+    img: "/cert3.png",
+    desc: "Participated in the EY International Techathon and advanced to Round 2 in a competitive technical challenge."
+  },
+  {
+    title: "International Conference IETE",
+    img: "/conference.jpeg",
+    desc: "Participated in an international conference conducted by IETE, gaining exposure to emerging technologies and research discussions."
+  },
+  {
+    title: "Science Expo",
+    img: "/scienceexpo.jpeg",
+    desc: "Presented an Offline Voice Assistant project at a science expo, demonstrating AI and voice recognition concepts."
+  },
+  {
+    title: "AI Agents Workshop",
+    img: "/workshop1.jpeg",
+    desc: "Attended an AI Agents workshop conducted by Parkqwik, exploring intelligent AI agent concepts and applications."
+  },
+  {
+    title: "IOT Workshop",
+    img: "/workshop2.jpeg",
+    desc: "Completed an offline IoT workshop conducted by PanTech E-Learning with practical sensor training experience."
+  },
+  {
+    title: "Langchain Workshop",
+    img: "/workshop3.png",
+    desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts."
+  }
+]].map((item, index) => (
         <div
           key={index}
-          className="min-w-[300px] flex-shrink-0 bg-[#F8EAF2] dark:bg-[#220814] rounded-3xl shadow-lg p-4 hover:scale-105 transition duration-300"
+          className="w-[300px] flex-shrink-0 bg-[#F8EAF2] dark:bg-[#220814] rounded-3xl shadow-lg p-4 hover:scale-105 transition duration-300"
         >
           <img
             src={item.img}
@@ -438,9 +460,9 @@ export default function Home() {
             {item.title}
           </h3>
 
-          <p className="text-sm text-[#5A3147] dark:text-[#D9CCD4]">
-            {item.desc}
-          </p>
+          <p className="text-sm text-[#5A3147] dark:text-[#D9CCD4] break-words whitespace-normal">
+  {item.desc}
+</p>
         </div>
       ))}
 
