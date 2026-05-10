@@ -46,6 +46,24 @@ export default function Home() {
       </div>
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-24">
+        <div
+  className="
+    inline-flex items-center gap-2
+    px-5 py-2 rounded-full mb-6
+    border backdrop-blur-lg
+    transition-all duration-300 hover:scale-105
+
+    bg-gradient-to-r from-pink-100 to-purple-100
+    border-purple-200 text-purple-700
+    shadow-[0_4px_20px_rgba(168,85,247,0.15)]
+
+    dark:from-white/10 dark:to-purple-500/10
+    dark:border-purple-400/30 dark:text-purple-300
+    dark:shadow-[0_4px_25px_rgba(168,85,247,0.25)]
+  "
+>
+  ✨ Available for Internships & Full-Time Opportunities
+</div>
         <div className="grid md:grid-cols-2 gap-10 items-center">
 
           {/* Left */}
@@ -72,28 +90,13 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#projects"
-                className="px-6 py-3 rounded-xl bg-[#C43C88] hover:bg-[#D46AA4] dark:bg-[#E164A8] dark:hover:bg-[#DDB7CF] text-white transition"
-              >
-                View Projects
-              </a>
-
-              <a
                 href="#contact"
                 className="px-6 py-3 rounded-xl border border-[#C43C88] text-[#C43C88] hover:bg-[#F8EAF2] dark:border-[#E164A8] dark:text-[#E8DEE4] dark:hover:bg-[#220814] transition"
               >
                 Contact Me
               </a>
-              <div className="flex gap-4 flex-wrap mt-4">
 
-  {/* View */}
-  <a
-    href="/resume.pdf"
-    target="_blank"
-    className="px-6 py-3 rounded-xl border border-[#C43C88] text-[#C43C88] hover:bg-[#F8EAF2] dark:border-[#E164A8] dark:text-[#E8DEE4] dark:hover:bg-[#220814] transition"
-  >
-    View Resume
-  </a>
+ 
 
   {/* Download */}
   <a
@@ -104,7 +107,7 @@ export default function Home() {
     Download Resume
   </a>
 
-</div>
+
             </div>
           </div>
 
