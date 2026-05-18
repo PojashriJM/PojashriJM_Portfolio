@@ -129,7 +129,7 @@ export default function Home() {
 
         <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg">
           <p className="text-lg leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
-            I am a passionate AI & Data Science student with strong interest in
+            I am a passionate pre-final year AI & Data Science student with strong interest in
             Machine Learning, NLP, Deep Learning, and Web Development.
             I enjoy building innovative projects that solve real-world problems.
           </p>
