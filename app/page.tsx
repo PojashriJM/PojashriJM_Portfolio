@@ -149,38 +149,7 @@ transition
           </p>
         </div>
       </section>
-
-      {/* Skills */}
-      {/* Skills */}
-<section className="max-w-6xl mx-auto px-6 py-20">
-  <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-    Skills
-  </h2>
-
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-    {[
-      "Python",
-      "Machine Learning",
-      "SQL",
-      "Java",
-      "JavaScript",
-      "React",
-      "HTML",
-      "Tailwind CSS",
-      "GitHub",
-      "Firebase",
-      "Cassandra",
-      "LangChain",
-    ].map((skill) => (
-      <div
-        key={skill}
-        className="bg-[#F8EAF2] dark:bg-[#220814] p-5 rounded-2xl text-center font-semibold shadow"
-      >
-        {skill}
-      </div>
-    ))}
-  </div>
-</section>
+  
 
         {/* About */}
         <section id="about" className="max-w-6xl mx-auto px-6 py-20">
