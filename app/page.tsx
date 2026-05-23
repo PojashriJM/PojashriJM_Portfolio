@@ -150,22 +150,6 @@ transition
         </div>
       </section>
   
-
-        {/* About */}
-        <section id="about" className="max-w-6xl mx-auto px-6 py-20">
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-            About Me
-          </h2>
-
-          <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg">
-            <p className="text-lg leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
-              I am a passionate AI & Data Science student with strong interest in
-              Machine Learning, NLP, Deep Learning, and Web Development.
-              I enjoy building innovative projects that solve real-world problems.
-            </p>
-          </div>
-        </section>
-
         {/* Skills */}
         <section id="skills" is="Skills" className="max-w-6xl mx-auto px-6 py-20">
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
