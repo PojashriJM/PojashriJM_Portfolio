@@ -4,6 +4,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaDatabase } from "react-icons/fa";
 import { MdOutlineComputer } from "react-icons/md";
 import { LuBrainCircuit } from "react-icons/lu";
+import { FaLinkedin } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { SiLeetcode } from "react-icons/si";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
 export default function Home() {
@@ -477,28 +480,158 @@ transition
 
             </div>
           </div>
-        </section>
+          </section>
+       {/* Contact */}
+<section id="contact" className="max-w-6xl mx-auto px-6 py-20">
 
-        {/* Contact */}
-        <section id="contact" className="max-w-6xl mx-auto px-6 py-20">
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-            Contact
-          </h2>
+  <h2 className="text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
+    Contact
+  </h2>
 
-          <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg space-y-4">
-            <a href="mailto:pojashrijm2006@gmail.com" className="block hover:underline">
-              Email: pojashrijm2006@gmail.com
-            </a>
+  <div className="bg-[#F8EAF2] dark:bg-[#220814] p-10 rounded-3xl shadow-lg grid md:grid-cols-2 gap-16 items-start">
 
-            <a href="https://github.com/PojashriJM" className="block hover:underline">
-              GitHub: github.com/PojashriJM
-            </a>
+    {/* Left Side */}
+    <div className="space-y-8 text-lg">
 
-            <a href="https://www.linkedin.com/in/poja-shri-jm/" className="block hover:underline">
-              LinkedIn: linkedin.com/in/poja-shri-jm
-            </a>
-          </div>
-        </section>
+      <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
+
+        <div className="text-3xl text-[#C43C88] mt-1">
+          <IoMdMail />
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold mb-2">Email</h3>
+
+          <a
+            href="mailto:pojashrijm2006@gmail.com"
+            className="text-lg hover:text-[#C43C88] transition"
+          >
+            pojashrijm2006@gmail.com
+          </a>
+        </div>
+      </div>
+
+
+      <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
+
+        <div className="text-3xl text-[#C43C88] mt-1">
+          <FaGithub />
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold mb-2">GitHub</h3>
+
+          <a
+            href="https://github.com/PojashriJM"
+            target="_blank"
+            className="text-lg hover:text-[#C43C88] transition"
+          >
+            github.com/PojashriJM
+          </a>
+        </div>
+      </div>
+
+
+      <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
+
+        <div className="text-3xl text-[#C43C88] mt-1">
+          <FaLinkedin />
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold mb-2">LinkedIn</h3>
+
+          <a
+            href="https://www.linkedin.com/in/poja-shri-jm/"
+            target="_blank"
+            className="text-lg hover:text-[#C43C88] transition"
+          >
+            linkedin.com/in/poja-shri-jm
+          </a>
+        </div>
+      </div>
+
+
+      <div className="flex items-start gap-5 hover:translate-x-2 transition-all duration-300">
+
+        <div className="text-3xl text-[#C43C88] mt-1">
+          <SiLeetcode />
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold mb-2">LeetCode</h3>
+
+          <a
+            href="https://leetcode.com/"
+            target="_blank"
+            className="text-lg hover:text-[#C43C88] transition"
+          >
+            leetcode.com/yourusername
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    {/* Right Side Form */}
+    <form className="space-y-6">
+
+      <div>
+        <label className="block mb-2 text-lg">Name</label>
+
+        <input
+          type="text"
+          placeholder="Enter your name"
+          className="w-full border border-gray-400 rounded-full px-5 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-400"
+        />
+      </div>
+
+
+      <div>
+        <label className="block mb-2 text-lg">Email</label>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="w-full border border-gray-400 rounded-full px-5 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-400"
+        />
+      </div>
+
+
+      <div>
+        <label className="block mb-2 text-lg">Subject</label>
+
+        <input
+          type="text"
+          placeholder="Enter subject"
+          className="w-full border border-gray-400 rounded-full px-5 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-400"
+        />
+      </div>
+
+
+      <div>
+        <label className="block mb-2 text-lg">Message</label>
+
+        <textarea
+          placeholder="Write your message..."
+          className="w-full border border-gray-400 rounded-3xl px-5 py-3 bg-transparent h-40 resize-none focus:outline-none focus:ring-2 focus:ring-pink-400"
+        ></textarea>
+      </div>
+
+
+      <button
+        type="submit"
+        className="bg-[#C43C88] hover:bg-[#a92f73] text-white px-8 py-3 rounded-full transition duration-300"
+      >
+        Send
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
 
         {/* Footer */}
         <footer className="text-center py-8 text-[#8B6479] dark:text-[#BDA9B6]">
