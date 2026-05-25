@@ -139,7 +139,7 @@ transition
       </section>
 
       {/* About */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
           About Me
         </h2>
