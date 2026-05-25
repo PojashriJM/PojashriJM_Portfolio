@@ -488,19 +488,19 @@ transition
     Contact
   </h2>
 
-  <div className="bg-[#F8EAF2] dark:bg-[#220814] p-10 rounded-3xl shadow-lg grid md:grid-cols-2 gap-16 items-start">
+  <div className="bg-[#F8EAF2] dark:bg-[#220814] p-10 rounded-3xl shadow-lg grid md:grid-cols-2 gap-10 md:gap-16 items-start">
 
     {/* Left Side */}
     <div className="space-y-8 text-lg">
 
       <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
 
-        <div className="text-3xl text-[#C43C88] mt-1">
+        <div className="text-2xl md:text-3xl text-[#C43C88] mt-1">
           <IoMdMail />
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-2">Email</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-2">Email</h3>
 
           <a
             href="mailto:pojashrijm2006@gmail.com"
@@ -514,12 +514,12 @@ transition
 
       <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
 
-        <div className="text-3xl text-[#C43C88] mt-1">
+        <div className="text-2xl md:text-3xl text-[#C43C88] mt-1">
           <FaGithub />
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-2">GitHub</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-2">GitHub</h3>
 
           <a
             href="https://github.com/PojashriJM"
@@ -534,12 +534,12 @@ transition
 
       <div className="flex items-start gap-5 border-b border-gray-700 pb-6 hover:translate-x-2 transition-all duration-300">
 
-        <div className="text-3xl text-[#C43C88] mt-1">
+        <div className="text-2xl md:text-3xl text-[#C43C88] mt-1">
           <FaLinkedin />
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-2">LinkedIn</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-2">LinkedIn</h3>
 
           <a
             href="https://www.linkedin.com/in/poja-shri-jm/"
@@ -554,12 +554,12 @@ transition
 
       <div className="flex items-start gap-5 hover:translate-x-2 transition-all duration-300">
 
-        <div className="text-3xl text-[#C43C88] mt-1">
+        <div className="text-2xl md:text-3xl text-[#C43C88] mt-1">
           <SiLeetcode />
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-2">LeetCode</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-2">LeetCode</h3>
 
           <a
             href="https://leetcode.com/"
@@ -578,7 +578,7 @@ transition
     <form className="space-y-6">
 
       <div>
-        <label className="block mb-2 text-lg">Name</label>
+        <label className="block mb-2 text-sm md:text-lg">Name</label>
 
         <input
           type="text"
@@ -589,7 +589,7 @@ transition
 
 
       <div>
-        <label className="block mb-2 text-lg">Email</label>
+        <label className="block mb-2 text-sm md:text-lg">Email</label>
 
         <input
           type="email"
@@ -600,7 +600,7 @@ transition
 
 
       <div>
-        <label className="block mb-2 text-lg">Subject</label>
+        <label className="block mb-2 text-sm md:text-lg">Subject</label>
 
         <input
           type="text"
@@ -611,7 +611,7 @@ transition
 
 
       <div>
-        <label className="block mb-2 text-lg">Message</label>
+        <label className="block mb-2 text-sm md:text-lg">Message</label>
 
         <textarea
           placeholder="Write your message..."
