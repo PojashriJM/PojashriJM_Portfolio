@@ -562,11 +562,11 @@ transition
           <h3 className="text-2xl md:text-3xl font-bold mb-2">LeetCode</h3>
 
           <a
-            href="https://leetcode.com/"
+            href="https://leetcode.com/u/PojashriJM/"
             target="_blank"
             className="text-lg hover:text-[#C43C88] transition"
           >
-            leetcode.com/yourusername
+            https://leetcode.com/u/PojashriJM/
           </a>
         </div>
       </div>
