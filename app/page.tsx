@@ -21,12 +21,6 @@ export default function Home() {
     }
   }, [darkMode]);
   return (
-  //    <motion.div
-  //     initial={{ opacity: 0, x: -50 }}
-  // whileInView={{ opacity: 1, x: 0 }}
-  // viewport={{ once: true }}
-  //   >
-    
     <>
       <Navbar />
       <main className="pt-10 min-h-screen bg-[#FFF8FC] text-[#4A2036] dark:bg-[#12040D] dark:text-[#E8DEE4] transition-colors duration-300">
@@ -71,7 +65,7 @@ transition
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight whitespace-nowrap">
                 Hi, I'm{" "}
-                <span className="text-[#C43C88] dark:text-[#E164A8]">
+                <span className=" text-[#C43C88] dark:text-[#E164A8] tracking-tight leading-none">
                   Poja Shri J M
                 </span>
               </h1>
@@ -80,7 +74,7 @@ transition
                 AI & Data Science Student
               </h2>
 
-              <p className="mt-6 text-lg text-[#7A4C64] dark:text-[#BDA9B6] leading-relaxed">
+              <p className="`${playwrite.className}` mt-6 text-lg text-[#7A4C64] dark:text-[#BDA9B6] leading-relaxed">
                 Passionate about Artificial Intelligence, Machine Learning,
                 Data Science, and building impactful real-world applications.
               </p>

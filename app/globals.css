@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,20 +28,26 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
+
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0px, 0px);
   }
+
   50% {
     transform: translate(30px, -30px);
   }
 }
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -51,10 +58,12 @@ body {
   width: max-content;
   animation: scroll 20s linear infinite;
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -66,4 +75,25 @@ body {
 
 .pause-animation:hover {
   animation-play-state: paused;
+}
+
+/* :root {
+  
+  --font-body: var(--font-outfit);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+} */
+ .font-playwrite {
+  font-family: var(--font-playwrite);
 }
