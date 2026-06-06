@@ -7,6 +7,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { SiLeetcode } from "react-icons/si";
+import { motion } from "framer-motion";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
 export default function Home() {
@@ -20,6 +21,12 @@ export default function Home() {
     }
   }, [darkMode]);
   return (
+  //    <motion.div
+  //     initial={{ opacity: 0, x: -50 }}
+  // whileInView={{ opacity: 1, x: 0 }}
+  // viewport={{ once: true }}
+  //   >
+    
     <>
       <Navbar />
       <main className="pt-10 min-h-screen bg-[#FFF8FC] text-[#4A2036] dark:bg-[#12040D] dark:text-[#E8DEE4] transition-colors duration-300">
@@ -140,6 +147,12 @@ transition
 
       {/* About */}
       <section id="about" className="max-w-6xl mx-auto px-6 py-20">
+        <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
         <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
           About Me
         </h2>
@@ -151,10 +164,17 @@ transition
             I enjoy building innovative projects that solve real-world problems.
           </p>
         </div>
+        </motion.div>
       </section>
   
         {/* Skills */}
         <section id="skills" is="Skills" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
             Skills
           </h2>
@@ -182,10 +202,17 @@ transition
               </div>
             ))}
           </div>
+          </motion.div>
         </section>
         <Languages />
         {/* Experience */}
         <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
+           <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
             Experience
           </h2>
@@ -241,8 +268,15 @@ transition
               </div>
             ))}
           </div>
+          </motion.div>
         </section>
         <section className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-10">
             Education
           </h2>
@@ -304,9 +338,16 @@ transition
               </p>
             </div>
           </div>
+          </motion.div>
         </section>
         {/* Projects */}
         <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
+           <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
             Projects
           </h2>
@@ -360,8 +401,15 @@ transition
               </div>
             ))}
           </div>
+          </motion.div>
         </section>
         <section id="participations" className="py-24 relative overflow-hidden">
+          <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
           <h2 className="text-4xl text-center font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
             Achievements & Participation
           </h2>
@@ -480,6 +528,7 @@ transition
 
             </div>
           </div>
+          </motion.div>
           </section>
        {/* Contact */}
 {/* Contact */}
@@ -487,7 +536,12 @@ transition
   id="contact"
   className="max-w-6xl mx-auto px-4 md:px-6 py-20"
 >
-
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
   <h2 className="text-3xl md:text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
     Contact
   </h2>
@@ -654,7 +708,7 @@ transition
     </form>
 
   </div>
-
+</motion.div>
 </section>
 
         {/* Footer */}
@@ -663,6 +717,8 @@ transition
         </footer>
 
       </main>
+     
     </>
+     
   );
 }
