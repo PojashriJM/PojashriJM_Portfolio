@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
