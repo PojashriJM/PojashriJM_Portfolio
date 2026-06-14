@@ -237,6 +237,14 @@ transition
                 contribution:
                   "Worked on machine learning models, data cleaning, and predictive analytics.",
               },
+              {
+                position: "Open Source Contributor",
+                company: "GirlScript Summer of Code",
+                date: "May 2026 - Aug 2026",
+                icon: <FaDatabase />,
+                contribution:
+                  "Worked on machine learning models, data cleaning, and predictive analytics.",
+              }
             ].map((experience) => (
               <div
                 key={experience.position}
