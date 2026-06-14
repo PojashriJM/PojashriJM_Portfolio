@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Poja shri J M",
+  title: "Poja Shri | AI & Data Science Portfolio",
   description: "AI & Data Science Student | NLP, Machine Learning, and Full Stack Development",
 };
 

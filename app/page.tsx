@@ -153,12 +153,12 @@ transition
 
         <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg">
           <p className="text-lg leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
-            I got into AI because of a simple question: how can technology make life easier for people?
-
+            I got into AI because of a simple question: <span className="font-bold">how can technology make life easier for people?</span>
+<br />
 That question led me to build things. A system that catches fake job postings before they mislead real candidates. A document intelligence tool that lets anyone interrogate a PDF like it's a conversation. Web apps that turn rough ideas into working products.
-
+<br />
 I'm a pre-final year AI & Data Science student at Jerusalem College of Engineering (CGPA 9.25), with internships in NLP, data science, and frontend development. My sweet spot is the intersection of language models and practical utility — building AI that's actually useful, not just technically impressive.
-
+<br />
 Currently obsessing over how LLMs handle the things they don't know, and how to build systems that are honest about their limits.
 
           </p>
