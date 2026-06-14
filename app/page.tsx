@@ -7,6 +7,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { SiLeetcode } from "react-icons/si";
+import { FaCodePullRequest } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
@@ -154,11 +155,11 @@ transition
         <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg">
           <p className="text-lg leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
             I got into AI because of a simple question: <span className="font-bold">how can technology make life easier for people?</span>
-<br />
+<br /><br />
 That question led me to build things. A system that catches fake job postings before they mislead real candidates. A document intelligence tool that lets anyone interrogate a PDF like it's a conversation. Web apps that turn rough ideas into working products.
-<br />
+<br /><br />
 I'm a pre-final year AI & Data Science student at Jerusalem College of Engineering (CGPA 9.25), with internships in NLP, data science, and frontend development. My sweet spot is the intersection of language models and practical utility — building AI that's actually useful, not just technically impressive.
-<br />
+<br /><br />
 Currently obsessing over how LLMs handle the things they don't know, and how to build systems that are honest about their limits.
 
           </p>
@@ -245,10 +246,10 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
               {
                 position: "Open Source Contributor",
                 company: "GirlScript Summer of Code",
-                date: "May 2026 - Aug 2026",
-                icon: <FaDatabase />,
+                date: "May 2026 - Present",
+                icon: <FaCodePullRequest />,
                 contribution:
-                  "Worked on machine learning models, data cleaning, and predictive analytics.",
+                  "Contributed to multiple open source repositories under GSSoC's AI Agents track, working within real collaborative development workflows — raising PRs, responding to maintainer reviews, and getting code merged into active codebases.",
               }
             ].map((experience) => (
               <div
