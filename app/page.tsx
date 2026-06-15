@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -217,8 +218,8 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
             Experience
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<Experience />
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 position: "AI & DS Intern",
@@ -276,7 +277,7 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
           </motion.div>
         </section>
         <section className="max-w-6xl mx-auto px-6 py-20">
