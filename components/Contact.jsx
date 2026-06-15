@@ -57,11 +57,11 @@ export default function Contact() {
             {/* Avatar + name + status */}
             <div className="flex items-center gap-4 mb-5">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C43C88] to-[#a855f7] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
-                PJ
+                PS
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white text-sm">
-                  Pojashri
+                  Pojashri J M
                 </p>
                 {/* Availability badge */}
                 <span className="inline-flex items-center gap-1.5 mt-1 text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800/50">
