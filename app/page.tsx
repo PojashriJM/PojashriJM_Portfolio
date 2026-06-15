@@ -11,6 +11,7 @@ import { FaCodePullRequest } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
+import Contact from "@/components/Contact";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -550,17 +551,18 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
   viewport={{ once: true, amount: 0.2 }}
   transition={{ duration: 0.8 }}
 >
-  <h2 className="text-3xl md:text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
+  <Contact />
+  {/* <h2 className="text-3xl md:text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
     Contact
-  </h2>
+  </h2> */}
 
-  <div className="bg-[#F8EAF2] dark:bg-[#220814] p-5 md:p-10 rounded-3xl shadow-lg grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+   {/* <div className="bg-[#F8EAF2] dark:bg-[#220814] p-5 md:p-10 rounded-3xl shadow-lg grid md:grid-cols-2 gap-10 md:gap-16 items-start"> */}
 
     {/* Left Side */}
-    <div className="space-y-6 md:space-y-8">
+    {/* <div className="space-y-6 md:space-y-8"> */}
 
       {/* Email */}
-      <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
+      {/* <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
 
         <div className="text-2xl md:text-3xl text-[#C43C88] mt-1 flex-shrink-0">
           <IoMdMail />
@@ -579,10 +581,10 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
           </a>
         </div>
       </div>
-
+  */}
 
       {/* GitHub */}
-      <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
+      {/* <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
 
         <div className="text-2xl md:text-3xl text-[#C43C88] mt-1 flex-shrink-0">
           <FaGithub />
@@ -601,11 +603,11 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
             github.com/PojashriJM
           </a>
         </div>
-      </div>
+      </div> */}
 
 
       {/* LinkedIn */}
-      <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
+      {/* <div className="flex items-start gap-4 border-b border-gray-700 pb-6 md:hover:translate-x-2 transition-all duration-300">
 
         <div className="text-2xl md:text-3xl text-[#C43C88] mt-1 flex-shrink-0">
           <FaLinkedin />
@@ -624,11 +626,11 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
             linkedin.com/in/poja-shri-jm
           </a>
         </div>
-      </div>
+      </div> */}
 
 
       {/* LeetCode */}
-      <div className="flex items-start gap-4 md:hover:translate-x-2 transition-all duration-300">
+      {/* <div className="flex items-start gap-4 md:hover:translate-x-2 transition-all duration-300">
 
         <div className="text-2xl md:text-3xl text-[#C43C88] mt-1 flex-shrink-0">
           <SiLeetcode />
@@ -649,11 +651,11 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
         </div>
       </div>
 
-    </div>
+    </div> */}
 
 
     {/* Right Side Form */}
-    <form className="space-y-5 md:space-y-6">
+    {/* <form className="space-y-5 md:space-y-6">
 
       <div>
         <label className="block mb-2 text-sm md:text-lg">
@@ -715,7 +717,7 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
 
     </form>
 
-  </div>
+  </div>  */}
 </motion.div>
 </section>
 
