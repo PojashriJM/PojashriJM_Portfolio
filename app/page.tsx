@@ -219,65 +219,6 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
             Experience
           </h2>
 <Experience />
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                position: "AI & DS Intern",
-                company: "Zeptoware Systems",
-                date: "Dec 2025 - Jan 2026",
-                icon: <LuBrainCircuit />,
-                contribution:
-                  "Built NLP-based Fake Job Detection System using ML and Deep Learning.",
-              },
-              {
-                position: "Frontend Developer Intern",
-                company: "Parkqwik Pvt. Ltd.",
-                date: "Jun 2025 - Jul 2025",
-                icon: <MdOutlineComputer />,
-                contribution:
-                  "Designed and developed 5+ responsive UI components using HTML, CSS, and JavaScript.",
-              },
-              {
-                position: "Data Science Intern",
-                company: "Nexila Technologies",
-                date: "Dec 2024 - Jan 2025",
-                icon: <FaDatabase />,
-                contribution:
-                  "Worked on machine learning models, data cleaning, and predictive analytics.",
-              },
-              {
-                position: "Open Source Contributor",
-                company: "GirlScript Summer of Code",
-                date: "May 2026 - Present",
-                icon: <FaCodePullRequest />,
-                contribution:
-                  "Contributed to multiple open source repositories under GSSoC's AI Agents track, working within real collaborative development workflows — raising PRs, responding to maintainer reviews, and getting code merged into active codebases.",
-              }
-            ].map((experience) => (
-              <div
-                key={experience.position}
-                className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg hover:scale-105 transition duration-300"
-              >
-                <div className="text-4xl mb-4">{experience.icon}</div>
-
-                <h3 className="text-xl font-bold mb-2">
-                  {experience.position}
-                </h3>
-
-                <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold">
-                  {experience.company}
-                </p>
-
-                <p className="text-sm text-[#8B6479] dark:text-[#BDA9B6] mt-1 mb-4">
-                  {experience.date}
-                </p>
-
-                <p className="leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
-                  {experience.contribution}
-                </p>
-              </div>
-            ))}
-          </div> */}
           </motion.div>
         </section>
         <section className="max-w-6xl mx-auto px-6 py-20">
