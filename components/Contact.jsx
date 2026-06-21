@@ -145,9 +145,9 @@ return (
     initial={{ opacity: 0, y: -10 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0 }}
-    className="mb-4 rounded-xl border border-pink-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 p-4"
+   className="mb-4 rounded-xl border border-pink-200 dark:border-pink-800/50 bg-pink-50 dark:bg-pink-900/20 p-4"
   >
-    <p className="text-sm text-green-700 dark:text-green-400">
+    <p className="text-sm text-[#C43C88] dark:text-pink-300">
       {successMessage}
     </p>
   </motion.div>
