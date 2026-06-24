@@ -10,8 +10,8 @@ const projects = [
     description:
       "Built a full-stack fraud detection system that analyses job titles and descriptions using ML classification. Benchmarked 4 models with feature engineering on text, metadata, and salary signals — achieving 18% reduction in false positives. Served via a Flask web interface.",
     tech: ["Python", "ML", "Flask", "HTML", "CSS", "NLP"],
-    github: "https://github.com/PojashriJM",
-    live: "https://pojashri-jm-portfolio.vercel.app",
+    github: "https://github.com/PojashriJM/FakeJobDetection",
+    live: "https://fakejobdetection.onrender.com/",
     border: "#C43C88",
     accent: "#e8749a",
   },
@@ -22,8 +22,8 @@ const projects = [
     description:
       "A pixel-commerce website where users purchase individual pixels and place branded logos on a shared canvas. Built with vanilla HTML/CSS/JS on the frontend and a Node.js backend deployed on Render — demonstrating full-stack ownership from UI to deployment.",
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Render"],
-    github: "https://github.com/PojashriJM",
-    live: "https://pojashri-jm-portfolio.vercel.app",
+    github: "https://github.com/PojashriJM/million-dollar-instapage",
+    live: "https://million-dollar-instapage.onrender.com/",
     border: "#a855c8",
     accent: "#c47ae8",
   },
@@ -34,7 +34,7 @@ const projects = [
     description:
       "Built an AI-powered document intelligence platform using LLMs and RAG architecture. Users upload PDFs and interact via natural language — the system retrieves semantically relevant chunks and synthesizes accurate, cited answers in real time.",
     tech: ["Groq", "Next.js", "React", "Typescript", "RAG"],
-    github: "https://github.com/PojashriJM",
+    github: "https://github.com/PojashriJM/DocMindAI",
     live: "https://doc-mind-ai-iota.vercel.app/",
     border: "#e06b6b",
     accent: "#e89090",
