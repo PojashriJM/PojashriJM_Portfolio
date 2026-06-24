@@ -29,25 +29,23 @@ const projects = [
   },
   {
     id: "03",
-    title: "AI Document QA System",
+    title: "DocMind AI",
     tagline: "Ask anything about your PDF — get cited answers",
     description:
-      "A lightweight RAG-based PDF question-answering system built with Streamlit, FAISS vector search, and HuggingFace sentence-transformer embeddings. Users upload any PDF and ask natural language questions — the system retrieves relevant chunks and synthesizes accurate answers without relying on external APIs.",
-    tech: ["Python", "Streamlit", "FAISS", "HuggingFace", "RAG"],
+      "Built an AI-powered document intelligence platform using LLMs and RAG architecture. Users upload PDFs and interact via natural language — the system retrieves semantically relevant chunks and synthesizes accurate, cited answers in real time.",
+    tech: ["Groq", "Next.js", "React", "Typescript", "RAG"],
     github: "https://github.com/PojashriJM",
-    live: "https://pojashri-jm-portfolio.vercel.app",
+    live: "https://doc-mind-ai-iota.vercel.app/",
     border: "#e06b6b",
     accent: "#e89090",
   },
   {
     id: "04",
-    title: "AI Predictive Vehicle Maintenance",
+    title: "AI Smart shoe for Visually Impaired",
     tagline: "Multi-agent AI shifting maintenance from reactive to proactive",
-    description:
-      "A multi-agent AI system integrating IoT sensor data, predictive ML models, and secure scheduling to anticipate vehicle failures before they occur. Built with Streamlit for the user interface — demonstrating systems-level AI design across data ingestion, inference, and actionable alerts.",
-    tech: ["Python", "Streamlit", "Multi-Agent AI", "IoT", "ML"],
-    github: "https://github.com/PojashriJM",
-    live: "https://pojashri-jm-portfolio.vercel.app",
+   description:
+  "An AI-powered smart shoe designed to assist visually impaired individuals with safer and more independent navigation. The system combines ultrasonic sensors, ESP32, and intelligent obstacle detection to identify nearby objects and provide real-time alerts through vibration and audio feedback. Built with a companion mobile application for location tracking and emergency assistance.",
+   tech: ["Arduino uno", "ESP32", "React", "Flutter", "Sensors"],
     border: "#5b8de8",
     accent: "#7aaaf0",
   },
