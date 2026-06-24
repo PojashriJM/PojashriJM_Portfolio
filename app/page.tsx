@@ -13,6 +13,7 @@ import Languages from "@/components/Languages";
 import Navbar from "@/components/navbar";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -231,11 +232,12 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
           <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-10">
             Education
           </h2>
+          <Education />
 
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
 
             {/* College */}
-            <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
+            {/* <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold">
                 B.Tech – Artificial Intelligence & Data Science
               </h3>
@@ -251,10 +253,10 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
               <p className="mt-2 font-medium">
                 CGPA: 9.2
               </p>
-            </div>
+            </div> */}
 
             {/* School (Optional) */}
-            <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
+            {/* <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold">
                 HSC
               </h3>
@@ -278,17 +280,17 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
 
               <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold mt-1">
                 Rajkumar sulochana Mat. hr. sec. school, Chennai
-              </p>
+              </p> 
 
               <p className="text-sm text-[#8B6479] dark:text-[#BDA9B6] mt-1">
                 2021
-              </p>
+              </p> */}
 
-              <p className="mt-2 font-medium">
+              {/* <p className="mt-2 font-medium">
                 94%
               </p>
             </div>
-          </div>
+          </div> */}
           </motion.div>
         </section>
         {/* Projects */}
