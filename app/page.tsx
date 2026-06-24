@@ -233,64 +233,6 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
             Education
           </h2>
           <Education />
-
-          {/* <div className="space-y-6">
-
-            {/* College */}
-            {/* <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold">
-                B.Tech – Artificial Intelligence & Data Science
-              </h3>
-
-              <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold mt-1">
-                Jerusalem College of Engineering, Chennai
-              </p>
-
-              <p className="text-sm text-[#8B6479] dark:text-[#BDA9B6] mt-1">
-                2023 – Present
-              </p>
-
-              <p className="mt-2 font-medium">
-                CGPA: 9.2
-              </p>
-            </div> */}
-
-            {/* School (Optional) */}
-            {/* <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold">
-                HSC
-              </h3>
-
-              <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold mt-1">
-                Jaigopal Garodia Girls Hr Sec School, Chennai
-              </p>
-
-              <p className="text-sm text-[#8B6479] dark:text-[#BDA9B6] mt-1">
-                2023
-              </p>
-
-              <p className="mt-2 font-medium">
-                89%
-              </p>
-            </div>
-            <div className="bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold">
-                SSLC
-              </h3>
-
-              <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold mt-1">
-                Rajkumar sulochana Mat. hr. sec. school, Chennai
-              </p> 
-
-              <p className="text-sm text-[#8B6479] dark:text-[#BDA9B6] mt-1">
-                2021
-              </p> */}
-
-              {/* <p className="mt-2 font-medium">
-                94%
-              </p>
-            </div>
-          </div> */}
           </motion.div>
         </section>
         {/* Projects */}
