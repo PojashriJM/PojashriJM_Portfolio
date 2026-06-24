@@ -14,6 +14,7 @@ import Navbar from "@/components/navbar";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Projects from "@/components/Projects";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -243,59 +244,12 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
   viewport={{ once: true, amount: 0.2 }}
   transition={{ duration: 0.8 }}
 >
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-            Projects
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "DocMind AI",
-                desc: "Built an AI-powered document intelligence platform using LLMs + RAG for answering questions from uploaded PDFs and documents.",
-                github: "https://github.com/PojashriJM/DocMindAI",
-              },
-              {
-                title: "Fake Job Detection",
-                desc: "Built end-to-end NLP pipeline and benchmarked 4 models with 18% reduction in false positives.",
-                github: "https://github.com/PojashriJM/FakeJobDetection",
-              },
-              {
-                title: "Heart Disease Prediction",
-                desc: "Achieved 92% accuracy using ML models with cross-validation and feature normalization.",
-                github: "https://github.com/PojashriJM/HeartDiseasePrediction",
-              },
-              {
-                title: "Employee Performance Prediction",
-                desc: "Built Streamlit app for predicting employee performance using HR metrics.",
-                github: "https://github.com/PojashriJM/EmployeePerformancePrediction",
-              },
-            ].map((project) => (
-              <div
-                key={project.title}
-                className="relative bg-[#F8EAF2] dark:bg-[#220814] p-6 rounded-3xl shadow-lg hover:scale-105 transition"
-              >
-
-                {/* GitHub Icon */}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute top-5 right-5 text-2xl text-[#C43C88] dark:text-[#E164A8] hover:scale-125 transition"
-                >
-                  <FaGithub />
-                </a>
-
-                <h3 className="text-2xl font-bold mb-3">
-                  {project.title}
-                </h3>
-
-                <p className="text-[#5A3147] dark:text-[#D9CCD4]">
-                  {project.desc}
-                </p>
-
-              </div>
-            ))}
-          </div>
+ 
+       <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
+                   Projects
+                 </h2>   
+ <Projects />
+        
           </motion.div>
         </section>
         <section id="participations" className="py-24 relative overflow-hidden">
