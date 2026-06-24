@@ -42,12 +42,13 @@ const projects = [
   {
     id: "04",
     title: "AI Smart shoe for Visually Impaired",
-    tagline: "Multi-agent AI shifting maintenance from reactive to proactive",
+    tagline: "AI-powered navigation assistance for visually impaired individuals",
    description:
   "An AI-powered smart shoe designed to assist visually impaired individuals with safer and more independent navigation. The system combines ultrasonic sensors, ESP32, and intelligent obstacle detection to identify nearby objects and provide real-time alerts through vibration and audio feedback. Built with a companion mobile application for location tracking and emergency assistance.",
    tech: ["Arduino uno", "ESP32", "React", "Flutter", "Sensors"],
     border: "#5b8de8",
     accent: "#7aaaf0",
+     hideLinks: true,
   },
 ];
 
@@ -148,40 +149,63 @@ export default function ProjectsSection() {
                     {p.tagline}
                   </p>
                 </div>
+   {!p.hideLinks && (
+  <div
+    style={{
+      display: "flex",
+      gap: 7,
+      flexShrink: 0,
+      marginLeft: 12,
+      marginTop: 2,
+    }}
+  >
+    <a
+      href={p.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="GitHub"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: 30,
+        height: 30,
+        borderRadius: 8,
+        background: isDark
+          ? "rgba(196,60,136,0.12)"
+          : "rgba(196,60,136,0.08)",
+        color: "#C43C88",
+        border: "1px solid rgba(196,60,136,0.2)",
+        textDecoration: "none",
+      }}
+    >
+      <GitHubIcon />
+    </a>
 
-                <div style={{ display: "flex", gap: 7, flexShrink: 0, marginLeft: 12, marginTop: 2 }}>
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                    style={{
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      width: 30, height: 30, borderRadius: 8,
-                      background: isDark ? "rgba(196,60,136,0.12)" : "rgba(196,60,136,0.08)",
-                      color: "#C43C88",
-                      border: "1px solid rgba(196,60,136,0.2)",
-                      textDecoration: "none",
-                    }}
-                  >
-                    <GitHubIcon />
-                  </a>
-                  <a
-                    href={p.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "flex", alignItems: "center", gap: 4,
-                      padding: "0 10px", height: 30, borderRadius: 8,
-                      background: p.border, color: "#fff",
-                      fontSize: 11, fontWeight: 600,
-                      textDecoration: "none", letterSpacing: "0.03em",
-                    }}
-                  >
-                    <ExternalIcon /> Live
-                  </a>
+    <a
+      href={p.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 4,
+        padding: "0 10px",
+        height: 30,
+        borderRadius: 8,
+        background: p.border,
+        color: "#fff",
+        fontSize: 11,
+        fontWeight: 600,
+        textDecoration: "none",
+        letterSpacing: "0.03em",
+      }}
+    >
+      <ExternalIcon /> Live
+    </a>
+  </div>
+)}
                 </div>
-              </div>
 
               {/* Divider */}
               <div style={{ height: 1, background: isDark ? "rgba(196,60,136,0.12)" : "rgba(196,60,136,0.1)", margin: "14px 0" }} />
