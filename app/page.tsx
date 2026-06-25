@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-10 min-h-screen bg-[#FFF8FC] text-[#4A2036] dark:bg-[#12040D] dark:text-[#E8DEE4] transition-colors duration-300">
+      <main className="overflow-x-hidden w-full pt-10 min-h-screen bg-[#FFF8FC] text-[#4A2036] dark:bg-[#12040D] dark:text-[#E8DEE4] transition-colors duration-300">
         <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
 
           <div className="absolute top-10 left-10 w-72 h-72 bg-pink-400/30 rounded-full blur-3xl" style={{ animation: "float 8s ease-in-out infinite" }} >
@@ -275,8 +275,8 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
           </h2>
 
           {/* Gradient fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
 
           {/* Scroll Wrapper */}
           <div className="relative overflow-hidden">
@@ -366,15 +366,15 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
                   desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts."
                 }
               ]].map((item, index) => (
-                <div
-                  key={index}
-                  className="w-[300px] flex-shrink-0 bg-[#F8EAF2] dark:bg-[#220814] rounded-3xl shadow-lg p-4 hover:scale-105 transition duration-300"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-48 object-cover rounded-xl mb-3"
-                  />
+               <div
+  key={index}
+  className="w-[260px] sm:w-[300px] flex-shrink-0 bg-[#F8EAF2] dark:bg-[#220814] rounded-3xl shadow-lg p-4 hover:scale-105 transition duration-300"
+>
+  <img
+    src={item.img}
+    alt={item.title}
+    className="w-full h-36 sm:h-48 object-contain rounded-xl mb-3 bg-white dark:bg-[#1a0810]"
+  />
 
                   <h3 className="font-semibold text-lg mb-1">
                     {item.title}

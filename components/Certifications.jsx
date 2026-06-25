@@ -14,18 +14,18 @@ const certs = [
   {
     title: "Natural Language Processing",
     issuer: "NPTEL",
-    date: "2024",
+    date: "2025",
     img: "/nptel-nlp.png",
-    credId: "Elite Certificate",
+    credId: "NLP Certificate",
     link: null,
   },
   {
     title: "SQL (Intermediate)",
     issuer: "HackerRank",
-    date: "2024",
+    date: "2026",
     img: "/hackerrank-sql.png",
     credId: "Credential ID on profile",
-    link: "https://www.hackerrank.com/certificates/",
+    link: "https://www.hackerrank.com/certificates/8deb0a0c1f3c",
   },
   {
     title: "GenAI in Data Analytics",
@@ -48,7 +48,7 @@ const certs = [
     issuer: "NoviTech R&D",
     date: "Jun–Jul 2025",
     img: "/novitech-fullstack.png",
-    credId: "Internship Training Certificate",
+    credId: " 30 Days MasterClass in Full Stack Development",
     link: null,
   },
 ];
@@ -110,24 +110,24 @@ function CertCard({ cert }) {
         </div>
 
         {/* Back */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-            borderRadius: "18px",
-            background: "linear-gradient(145deg, #3a1228, #220814)",
-          }}
-          className="flex flex-col items-center justify-center p-6 gap-3"
-        >
-          <div className="w-14 h-14 rounded-full border border-[#C43C88]/40 bg-[#C43C88]/10 flex items-center justify-center text-[#E164A8] text-2xl">
-            🏅
-          </div>
-          <p className="text-sm font-medium text-[#F8EAF2] text-center leading-snug">{cert.title}</p>
-          <p className="text-xs text-[#D9CCD4] text-center">{cert.issuer} · {cert.date}</p>
-          <p className="text-[11px] text-[#D9CCD4]/60 font-mono text-center break-all">{cert.credId}</p>
+      {/* Back */}
+<div
+  style={{
+    position: "absolute",
+    inset: 0,
+    backfaceVisibility: "hidden",
+    WebkitBackfaceVisibility: "hidden",
+    transform: "rotateY(180deg)",
+    borderRadius: "18px",
+  }}
+  className="flex flex-col items-center justify-center p-6 gap-3 bg-gradient-to-br from-[#fbeaf0] to-[#f4c0d1] dark:from-[#3a1228] dark:to-[#220814]"
+>
+  <div className="w-14 h-14 rounded-full border border-[#C43C88]/40 bg-[#C43C88]/10 flex items-center justify-center text-[#E164A8] text-2xl">
+    🏅
+  </div>
+  <p className="text-sm font-medium text-[#3a1228] dark:text-[#F8EAF2] text-center leading-snug">{cert.title}</p>
+  <p className="text-xs text-[#7a3050] dark:text-[#D9CCD4] text-center">{cert.issuer} · {cert.date}</p>
+  <p className="text-[11px] text-[#9a5070]/70 dark:text-[#D9CCD4]/60 font-mono text-center break-all">{cert.credId}</p>
          {cert.link ? (
    <a
     href={cert.link}
@@ -139,11 +139,11 @@ function CertCard({ cert }) {
      ↗ verify credential
   </a>
 ) : (
-  <span className="text-[12px] text-[#D9CCD4]/40 border border-white/10 px-4 py-1.5 rounded-full">
+  <span className="text-[12px] text-[#9a5070]/40 dark:text-[#D9CCD4]/30 border border-[#9a5070]/10 px-4 py-1.5 rounded-full">
     internal record
   </span>
 )}
-          <p className="text-[11px] text-[#D9CCD4]/30 mt-1">tap again to flip back</p>
+         <p className="text-[11px] text-[#9a5070]/40 dark:text-[#D9CCD4]/30 mt-1">tap again to flip back</p>
         </div>
       </div>
     </div>
