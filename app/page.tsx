@@ -15,6 +15,7 @@ import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
+import Certifications from "@/components/Certifications";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -252,6 +253,16 @@ Currently obsessing over how LLMs handle the things they don't know, and how to 
         
           </motion.div>
         </section>
+        <section id="certifications" className="max-w-6xl mx-auto px-6 py-20">
+           <motion.div
+  initial={{ opacity: 0, y: 50 }} 
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.8 }}
+>
+  <Certifications />
+      </motion.div>
+        </section>  
         <section id="participations" className="py-24 relative overflow-hidden">
           <motion.div
   initial={{ opacity: 0, y: 50 }}
