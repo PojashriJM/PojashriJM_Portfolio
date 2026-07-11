@@ -432,7 +432,7 @@ export default function Home() {
         {/* Footer */}
         <footer className={`text-center py-8 relative ${TEXT_MUTED} text-sm`}>
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-px bg-gradient-to-r from-transparent via-[#22D3EE]/40 to-transparent" />
-          Made with 🩷 by Poja Shri J M.
+          Made with 🩵 by Poja Shri J M.
         </footer>
       </main>
     </>
