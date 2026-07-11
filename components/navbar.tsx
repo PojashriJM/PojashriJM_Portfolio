@@ -13,116 +13,203 @@ export default function Navbar() {
     "Projects",
     "Experience",
     "Contact",
-    "Participations",
   ];
 
   return (
     <nav
       className="
       fixed top-0 left-0 w-full
-      bg-white/10 dark:bg-black/20
-      backdrop-blur-xl
-      border-b border-white/10
       z-[9999]
-      shadow-md
+
+      bg-white/90
+      dark:bg-[#08111f]/80
+
+      backdrop-blur-xl
+
+      border-b
+      border-slate-200
+      dark:border-cyan-500/10
     "
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto h-[74px] px-8 flex items-center">
 
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-pink-500 dark:text-pink-300">
-          Pojashri
-        </h1>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8">
+        <div className="mr-16 flex items-center gap-1">
+
+          <span className="text-3xl font-bold text-slate-900 dark:text-white">
+            poja
+          </span>
+
+          <span className="text-3xl font-bold text-cyan-500 dark:text-cyan-400">
+            shri
+          </span>
+
+        </div>
+
+        {/* Desktop */}
+
+        <ul className="hidden md:flex items-center gap-10">
+
           {navLinks.map((link) => (
+
             <li key={link}>
+
               <a
                 href={`#${link.toLowerCase()}`}
                 className="
-text-gray-700 dark:text-white
-hover:text-pink-500
-dark:hover:text-pink-400
-active:text-pink-500
-dark:active:text-pink-400
-transition
-text-lg
-font-medium
-py-2 px-3
-rounded-lg
-active:bg-pink-100/20
-"
+                relative
+
+                text-[17px]
+                font-medium
+
+                text-slate-600
+                dark:text-slate-300
+
+                transition-all
+                duration-300
+
+                hover:text-cyan-500
+                dark:hover:text-cyan-300
+
+                after:absolute
+                after:left-0
+                after:-bottom-[8px]
+
+                after:h-[2px]
+                after:w-0
+
+                after:bg-cyan-500
+                dark:after:bg-cyan-300
+
+                after:transition-all
+                after:duration-300
+
+                hover:after:w-full
+                "
               >
                 {link}
               </a>
+
             </li>
+
           ))}
+
         </ul>
 
-        {/* Mobile Hamburger */}
+        {/* Theme Toggle */}
+
+        <div className="ml-auto">
+
+          {/* Put your ThemeToggle component here */}
+
+        </div>
+
+        {/* Mobile Button */}
+
         <button
-          className="
-          md:hidden
-          flex items-center justify-center
-          w-10 h-10
-          rounded-full
-          bg-white/10 dark:bg-black/20
-          backdrop-blur-lg
-          border border-pink-400/40
-          text-pink-500 dark:text-pink-300
-          shadow-md
-          relative z-[99999]
-        "
           onClick={() => setOpen(!open)}
+          className="
+          ml-auto
+          md:hidden
+
+          flex
+          items-center
+          justify-center
+
+          w-10
+          h-10
+
+          rounded-xl
+
+          border
+          border-slate-300
+          dark:border-cyan-500/20
+
+          bg-white
+          dark:bg-cyan-500/5
+
+          text-cyan-500
+          dark:text-cyan-300
+
+          hover:bg-cyan-50
+          dark:hover:bg-cyan-500/10
+
+          transition
+          "
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
+
       </div>
 
       {/* Mobile Menu */}
+
       {open && (
+
         <div
           className="
           md:hidden
-          mx-4 mb-4
+
+          mx-5
+          mb-5
+
           rounded-2xl
-          bg-white/10 dark:bg-black/30
+
+          bg-white
+          dark:bg-[#08111f]/95
+
+          border
+          border-slate-200
+          dark:border-cyan-500/15
+
           backdrop-blur-xl
-          border border-white/10
+
           shadow-xl
-          px-6 py-6
-          flex flex-col gap-5
-        "
+
+          p-6
+
+          flex
+          flex-col
+
+          gap-4
+          "
         >
+
           {navLinks.map((link) => (
+
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="
-block
-text-gray-700 dark:text-white
-hover:text-pink-500
-dark:hover:text-pink-400
-active:text-pink-500
-dark:active:text-pink-400
-hover:bg-pink-100/40
-active:bg-pink-200/40
-dark:hover:bg-white/10
-dark:active:bg-white/10
-transition-all duration-200
-text-lg
-font-medium
-py-3 px-4
-rounded-xl
-"
               onClick={() => setOpen(false)}
+              className="
+              rounded-xl
+
+              px-4
+              py-3
+
+              text-slate-700
+              dark:text-slate-300
+
+              hover:text-cyan-500
+              dark:hover:text-cyan-300
+
+              hover:bg-cyan-50
+              dark:hover:bg-cyan-500/10
+
+              transition-all
+              duration-200
+              "
             >
               {link}
             </a>
+
           ))}
+
         </div>
+
       )}
+
     </nav>
   );
 }

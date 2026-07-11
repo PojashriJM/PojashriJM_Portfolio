@@ -83,9 +83,9 @@ function CertCard({ cert }) {
             borderRadius: "18px",
             overflow: "hidden",
           }}
-          className="bg-[#F8EAF2] dark:bg-[#220814] border border-[#f4c0d1] dark:border-[#72243e] flex flex-col"
+          className="bg-white dark:bg-[#131E24] border border-[rgba(18,24,27,0.10)] dark:border-[rgba(231,246,248,0.08)] flex flex-col"
         >
-          <div className="w-full h-40 overflow-hidden bg-white dark:bg-[#3a1228] flex items-center justify-center rounded-t-[18px]">
+          <div className="w-full h-40 overflow-hidden bg-[#EEF1F5] dark:bg-[#0A1216] flex items-center justify-center rounded-t-[18px]">
             <img
               src={cert.img}
               alt={cert.title}
@@ -95,55 +95,54 @@ function CertCard({ cert }) {
           </div>
           <div className="p-4 flex flex-col gap-2 flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-[11px] font-medium px-2 py-1 rounded-full bg-white dark:bg-[#3a1228] text-[#993556] dark:text-[#ED93B1] border border-[#f4c0d1] dark:border-[#72243e]">
+              <span className="text-[11px] font-mono px-2 py-1 rounded-full bg-[#EEF1F5] dark:bg-[#0A1216] text-[#0E7C86] dark:text-[#22D3EE] border border-[rgba(18,24,27,0.10)] dark:border-[rgba(231,246,248,0.08)]">
                 {cert.issuer}
               </span>
-              <span className="text-[11px] text-[#5A3147] dark:text-[#D9CCD4]">{cert.date}</span>
+              <span className="text-[11px] text-[#55646C] dark:text-[#93A9AF]">{cert.date}</span>
             </div>
-            <p className="text-sm font-medium text-[#3a1228] dark:text-[#F8EAF2] leading-snug">
+            <p className="text-sm font-medium text-[#12181B] dark:text-[#E7F6F8] leading-snug">
               {cert.title}
             </p>
-            <p className="text-[11px] text-[#C43C88] mt-auto flex items-center gap-1">
+            <p className="text-[11px] text-[#0E7C86] dark:text-[#22D3EE] mt-auto flex items-center gap-1">
               ↻ tap for credential id
             </p>
           </div>
         </div>
 
         {/* Back */}
-      {/* Back */}
-<div
-  style={{
-    position: "absolute",
-    inset: 0,
-    backfaceVisibility: "hidden",
-    WebkitBackfaceVisibility: "hidden",
-    transform: "rotateY(180deg)",
-    borderRadius: "18px",
-  }}
-  className="flex flex-col items-center justify-center p-6 gap-3 bg-gradient-to-br from-[#fbeaf0] to-[#f4c0d1] dark:from-[#3a1228] dark:to-[#220814]"
->
-  <div className="w-14 h-14 rounded-full border border-[#C43C88]/40 bg-[#C43C88]/10 flex items-center justify-center text-[#E164A8] text-2xl">
-    🏅
-  </div>
-  <p className="text-sm font-medium text-[#3a1228] dark:text-[#F8EAF2] text-center leading-snug">{cert.title}</p>
-  <p className="text-xs text-[#7a3050] dark:text-[#D9CCD4] text-center">{cert.issuer} · {cert.date}</p>
-  <p className="text-[11px] text-[#9a5070]/70 dark:text-[#D9CCD4]/60 font-mono text-center break-all">{cert.credId}</p>
-         {cert.link ? (
-   <a
-    href={cert.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={(e) => e.stopPropagation()}
-    className="text-[12px] text-[#E164A8] border border-[#C43C88]/50 px-4 py-1.5 rounded-full hover:bg-[#C43C88]/15 transition"
-  >
-     ↗ verify credential
-  </a>
-) : (
-  <span className="text-[12px] text-[#9a5070]/40 dark:text-[#D9CCD4]/30 border border-[#9a5070]/10 px-4 py-1.5 rounded-full">
-    internal record
-  </span>
-)}
-         <p className="text-[11px] text-[#9a5070]/40 dark:text-[#D9CCD4]/30 mt-1">tap again to flip back</p>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+            borderRadius: "18px",
+          }}
+          className="flex flex-col items-center justify-center p-6 gap-3 bg-gradient-to-br from-[#EAFBFD] to-[#C7EEF3] dark:from-[#0E1A1E] dark:to-[#131E24]"
+        >
+          <div className="w-14 h-14 rounded-full border border-[#0E7C86]/40 dark:border-[#22D3EE]/40 bg-[#0E7C86]/10 dark:bg-[#22D3EE]/10 flex items-center justify-center text-2xl">
+            🏅
+          </div>
+          <p className="text-sm font-medium text-[#12181B] dark:text-[#E7F6F8] text-center leading-snug">{cert.title}</p>
+          <p className="text-xs text-[#55646C] dark:text-[#93A9AF] text-center">{cert.issuer} · {cert.date}</p>
+          <p className="text-[11px] text-[#8896A0]/80 dark:text-[#5C6F76]/80 font-mono text-center break-all">{cert.credId}</p>
+          {cert.link ? (
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-[12px] text-[#0E7C86] dark:text-[#22D3EE] border border-[#0E7C86]/40 dark:border-[#22D3EE]/40 px-4 py-1.5 rounded-full hover:bg-[#22D3EE]/15 transition"
+            >
+              ↗ verify credential
+            </a>
+          ) : (
+            <span className="text-[12px] text-[#8896A0]/60 dark:text-[#5C6F76]/60 border border-[rgba(18,24,27,0.10)] dark:border-[rgba(231,246,248,0.08)] px-4 py-1.5 rounded-full">
+              internal record
+            </span>
+          )}
+          <p className="text-[11px] text-[#8896A0]/50 dark:text-[#5C6F76]/50 mt-1">tap again to flip back</p>
         </div>
       </div>
     </div>
@@ -160,14 +159,15 @@ export default function Certifications() {
         transition={{ duration: 0.8 }}
       >
         <div className="mb-3 flex">
-          <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#fbeaf0] dark:bg-[#3a1228] text-[#993556] dark:text-[#ED93B1] border border-[#f4c0d1] dark:border-[#72243e]">
-            verified credentials
+          <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#EAFBFD] dark:bg-[#0E1A1E] text-[#0E7C86] dark:text-[#22D3EE] border border-[#0E7C86]/25 dark:border-[#22D3EE]/25">
+            verified_credentials
           </span>
         </div>
-        <h2 className="text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-2">
+        <h2 className="text-4xl font-bold text-[#12181B] dark:text-[#E7F6F8] mb-2">
+          <span className="font-mono text-xl tracking-wide text-[#0E7C86] dark:text-[#22D3EE] mr-3 align-middle"># certifications</span>
           Certifications
         </h2>
-        <p className="text-sm text-[#5A3147] dark:text-[#D9CCD4] mb-10">
+        <p className="text-sm text-[#55646C] dark:text-[#93A9AF] mb-10">
           Tap any card to view credential details
         </p>
 

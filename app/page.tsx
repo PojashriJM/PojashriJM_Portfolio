@@ -16,6 +16,36 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
+
+// Shared design tokens (cyan/ink system) used as class strings below so
+// every section pulls from the same palette instead of one-off hex values.
+const PAGE_BG = "bg-[#EEF1F5] dark:bg-[#0A1216]";
+const CARD_BG = "bg-white dark:bg-[#131E24]";
+const BORDER = "border-[rgba(18,24,27,0.10)] dark:border-[rgba(231,246,248,0.08)]";
+const TEXT_PRIMARY = "text-[#12181B] dark:text-[#E7F6F8]";
+const TEXT_SECONDARY = "text-[#55646C] dark:text-[#93A9AF]";
+const TEXT_MUTED = "text-[#8896A0] dark:text-[#5C6F76]";
+const CYAN_TEXT = "text-[#0E7C86] dark:text-[#22D3EE]";
+
+// Small monospace "code comment" tag placed before every section heading —
+// echoes the hero's `>>> whoami` prompt so the whole page reads as one
+// system instead of a themed hero bolted onto old sections.
+function SectionTag({ label }: { label: string }) {
+  return (
+    <span className={`font-mono text-xs tracking-wide ${CYAN_TEXT} mr-3 align-middle`}>
+      {`# ${label}`}
+    </span>
+  );
+}
+
+function CyanDivider() {
+  return (
+    <div className="relative h-px w-full my-2">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#22D3EE]/40 to-transparent" />
+    </div>
+  );
+}
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -26,394 +56,388 @@ export default function Home() {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
+
+  const skills = [
+    "python",
+    "machine_learning",
+    "sql",
+    "java",
+    "javascript",
+    "react",
+    "html",
+    "tailwind_css",
+    "github",
+    "firebase",
+    "cassandra",
+    "langchain",
+  ];
+
+  const achievements = [
+    {
+      title: "TNWISE Women Hackathon",
+      img: "/cert1.jpeg",
+      desc: "Participated in the TNWISE Women Hackathon held at Rajalakshmi Engineering College and advanced to Round 2 among shortlisted teams.",
+    },
+    {
+      title: "AIWS Women Hackathon",
+      img: "/cert2.png",
+      desc: "Participated in the All India Women Start-a-thon and advanced to Round 2 by presenting innovative problem-solving ideas.",
+    },
+    {
+      title: "EY International Techkathon",
+      img: "/cert3.png",
+      desc: "Participated in the EY International Techathon and advanced to Round 2 in a competitive technical challenge.",
+    },
+    {
+      title: "International Conference IETE",
+      img: "/conference.jpeg",
+      desc: "Participated in an international conference conducted by IETE, gaining exposure to emerging technologies and research discussions.",
+    },
+    {
+      title: "Science Expo",
+      img: "/scienceexpo.jpeg",
+      desc: "Presented an Offline Voice Assistant project at a science expo, demonstrating AI and voice recognition concepts.",
+    },
+    {
+      title: "AI Agents Workshop",
+      img: "/workshop1.jpeg",
+      desc: "Attended an AI Agents workshop conducted by Parkqwik, exploring intelligent AI agent concepts and applications.",
+    },
+    {
+      title: "IOT Workshop",
+      img: "/workshop2.jpeg",
+      desc: "Completed an offline IoT workshop conducted by PanTech E-Learning with practical sensor training experience.",
+    },
+    {
+      title: "Langchain Workshop",
+      img: "/workshop3.png",
+      desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts.",
+    },
+  ];
+  const marqueeItems = achievements.concat(achievements);
+
   return (
     <>
       <Navbar />
-      <main className="overflow-x-hidden w-full pt-10 min-h-screen bg-[#FFF8FC] text-[#4A2036] dark:bg-[#12040D] dark:text-[#E8DEE4] transition-colors duration-300">
-        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-
-          <div className="absolute top-10 left-10 w-72 h-72 bg-pink-400/30 rounded-full blur-3xl" style={{ animation: "float 8s ease-in-out infinite" }} >
-          </div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400/30 rounded-full blur-3xl" style={{ animation: "float 10s ease-in-out infinite" }} >
-          </div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-rose-300/20 rounded-full blur-3xl" style={{ animation: "float 12s ease-in-out infinite" }} >
-          </div>
-        </div>
-        <div className="fixed top-4 right-20 md:right-5 z-[99999]">
+      <main className={`overflow-x-hidden w-full pt-10 min-h-screen ${PAGE_BG} ${TEXT_PRIMARY} transition-colors duration-300`}>
+        <div className="fixed top-4 right-5 z-[99999]">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="
-w-10 h-10
-flex items-center justify-center
-rounded-full
-bg-white/10 dark:bg-black/20
-backdrop-blur-lg
-border border-pink-400/40
-text-xl
-shadow-lg
-hover:scale-105
-transition
-"
+            className={`w-10 h-10 flex items-center justify-center rounded-lg ${CARD_BG} border ${BORDER} ${CYAN_TEXT} text-lg shadow-sm hover:scale-105 transition`}
           >
-            {darkMode ? "☀" : "🌙"}
+            {darkMode ? "☀" : "☾"}
           </button>
         </div>
-        {/* Hero Section */}
-        <section id="home" className="max-w-6xl mx-auto px-6 py-24">
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Hero — signature element is the "record card": your profile styled
+            as row_index 0 of a dataframe, small avatar chip instead of a
+            large photo, mono field labels. No blobs, no big portrait. */}
+        <section id="home" className="relative max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
+          <div
+            className="absolute inset-0 pointer-events-none opacity-60 dark:opacity-40"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(18,24,27,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(18,24,27,0.05) 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+              maskImage: "linear-gradient(to bottom, black, transparent 80%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black, transparent 80%)",
+            }}
+          />
 
-            {/* Left */}
+          <div className="relative grid md:grid-cols-[1fr_340px] gap-12 md:gap-16 items-start">
+            {/* Left: text */}
             <div>
-              <p className="text-[#C43C88] dark:text-[#E164A8] font-semibold mb-3">
-                Welcome to my portfolio
-              </p>
+              <div className={`font-mono text-sm mb-6 ${CYAN_TEXT}`}>
+                <span className={TEXT_MUTED}>&gt;&gt;&gt; </span>whoami
+              </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight whitespace-nowrap">
-                Hi, I'm{" "}
-                <span className=" text-[#C43C88] dark:text-[#E164A8] tracking-tight leading-none">
-                  Poja Shri J M
-                </span>
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.08] tracking-tight">
+                Hi, I&apos;m{" "}
+                <span className={CYAN_TEXT}>Poja Shri J M</span>
               </h1>
 
-              <h2 className="text-2xl mt-4 text-[#6B3B56] dark:text-[#D9CCD4]">
-                AI & Data Science Student
-              </h2>
+              <div className="flex flex-wrap gap-2 mt-5 mb-6">
+                <span className={`font-mono text-xs px-3 py-1.5 rounded-md ${CARD_BG} border ${BORDER} ${TEXT_SECONDARY}`}>
+                  ai_&amp;_data_science
+                </span>
+                <span className={`font-mono text-xs px-3 py-1.5 rounded-md ${CARD_BG} border ${BORDER} ${TEXT_SECONDARY}`}>
+                  final_year
+                </span>
+              </div>
 
-              <p className="`${playwrite.className}` mt-6 text-lg text-[#7A4C64] dark:text-[#BDA9B6] leading-relaxed">
-                Passionate about Artificial Intelligence, Machine Learning,
-                Data Science, and building impactful real-world applications.
+              <p className={`max-w-md text-base md:text-lg leading-relaxed ${TEXT_SECONDARY}`}>
+                I build systems that turn messy, real-world data and language
+                into something usable — from document intelligence pipelines
+                to models that know the limits of what they know.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="px-6 py-3 rounded-xl border border-[#C43C88] text-[#C43C88] hover:bg-[#F8EAF2] dark:border-[#E164A8] dark:text-[#E8DEE4] dark:hover:bg-[#220814] transition"
-                >
-                  Contact Me
-                </a>
-
-
-
-                {/* Download */}
+              <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a
                   href="/resume.pdf"
                   download
-                  className="px-6 py-3 rounded-xl bg-[#C43C88] hover:bg-[#D46AA4] dark:bg-[#E164A8] dark:hover:bg-[#DDB7CF] text-white transition"
+                  className="px-6 py-3 rounded-lg bg-[#06B6D4] hover:bg-[#22D3EE] dark:bg-[#22D3EE] dark:hover:bg-[#67E4F4] text-[#052227] font-medium transition"
                 >
                   Download Resume
                 </a>
-
-
-
-                <div
-                  className="
-    inline-flex items-center gap-2
-    px-5 py-2 rounded-full mb-6
-    border backdrop-blur-lg
-    transition-all duration-300 hover:scale-105
-
-    bg-gradient-to-r from-pink-100 to-purple-100
-    border-purple-200 text-purple-700
-    shadow-[0_4px_20px_rgba(168,85,247,0.15)]
-
-    dark:from-white/10 dark:to-purple-500/10
-    dark:border-purple-400/30 dark:text-purple-300
-    dark:shadow-[0_4px_25px_rgba(168,85,247,0.25)]
-  "
-
->
-  ✨ Available for Internships & Full-Time Opportunities
-</div>
-          </div>
- </div>
-          {/* Right */}
-         <div className="flex justify-center">
-  <div className="p-1 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 shadow-2xl">
-    
-    <div className="w-72 h-72 rounded-full overflow-hidden relative z-10">
-      <img 
-        src={"Poja shri.jpeg"} 
-        className="w-full h-full object-cover"
-        alt="Poja Shri"
-      />
-    </div>
-
-  </div>
-</div>
-
-        </div>
-      </section>
-
-      {/* About */}
-      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
-        <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-        <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-          About Me
-        </h2>
-
-        <div className="bg-[#F8EAF2] dark:bg-[#220814] p-8 rounded-3xl shadow-lg">
-          <p className="text-lg leading-relaxed text-[#5A3147] dark:text-[#D9CCD4]">
-            I got into AI because of a simple question: <span className="font-bold">how can technology make life easier for people?</span>
-<br /><br />
-That question led me to build things. A system that catches fake job postings before they mislead real candidates. A document intelligence tool that lets anyone interrogate a PDF like it's a conversation. Web apps that turn rough ideas into working products.
-<br /><br />
-I'm a pre-final year AI & Data Science student at Jerusalem College of Engineering (CGPA 9.25), with internships in NLP, data science, and frontend development. My sweet spot is the intersection of language models and practical utility — building AI that's actually useful, not just technically impressive.
-<br /><br />
-Currently obsessing over how LLMs handle the things they don't know, and how to build systems that are honest about their limits.
-
-          </p>
-        </div>
-        </motion.div>
-      </section>
-  
-        {/* Skills */}
-        <section id="skills" is="Skills" className="max-w-6xl mx-auto px-6 py-20">
-          <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-            Skills
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {[
-              "Python",
-              "Machine Learning",
-              "SQL",
-              "Java",
-              "JavaScript",
-              "React",
-              "HTML",
-              "Tailwind CSS",
-              "GitHub",
-              "Firebase",
-              "Cassandra",
-              "LangChain",
-            ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-[#F8EAF2] dark:bg-[#220814] p-5 rounded-2xl text-center font-semibold shadow"
-              >
-                {skill}
+                <a
+                  href="#contact"
+                  className={`group flex items-center gap-2 font-medium ${TEXT_PRIMARY}`}
+                >
+                  Contact me
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </a>
               </div>
-            ))}
-          </div>
-          </motion.div>
-        </section>
-        <Languages />
-        {/* Experience */}
-        <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
-           <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-            Experience
-          </h2>
-<Experience />
-          </motion.div>
-        </section>
-        <section className="max-w-6xl mx-auto px-6 py-20">
-          <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-          <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-10">
-            Education
-          </h2>
-          <Education />
-          </motion.div>
-        </section>
-        {/* Projects */}
-        <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-           <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
- 
-       <h2 className="text-4xl text-[#C43C88] dark:text-[#E164A8] font-bold mb-8">
-                   Projects
-                 </h2>   
- <Projects />
-        
-          </motion.div>
-        </section>
-        <section id="certifications" className="max-w-6xl mx-auto px-6 py-20">
-           <motion.div
-  initial={{ opacity: 0, y: 50 }} 
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-  <Certifications />
-      </motion.div>
-        </section>  
-        <section id="participations" className="py-24 relative overflow-hidden">
-          <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-          <h2 className="text-4xl text-center font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
-            Achievements & Participation
-          </h2>
 
-          {/* Gradient fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#FFF8FC] dark:from-[#12040D] to-transparent z-10"></div>
+              <div className={`mt-10 flex items-center gap-2 text-xs font-mono ${TEXT_MUTED}`}>
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_0_3px_rgba(34,197,94,0.18)]" />
+                status: open_to_internships &amp; full_time
+              </div>
+            </div>
 
-          {/* Scroll Wrapper */}
-          <div className="relative overflow-hidden">
-            <div className="flex w-max gap-6 animate-marquee pause-animation">
+            {/* Right: record card */}
+            <div className={`relative rounded-xl ${CARD_BG} border ${BORDER} shadow-sm overflow-hidden`}>
+              <div className="absolute top-0 left-0 w-[3px] h-full bg-[#0E7C86] dark:bg-[#22D3EE]" />
 
-              {[...[
-                {
-                  title: "TNWISE Women Hackathon",
-                  img: "/cert1.jpeg",
-                  desc: "Participated in the TNWISE Women Hackathon held at Rajalakshmi Engineering College and advanced to Round 2 among shortlisted teams."
-                },
-                {
-                  title: "AIWS Women Hackathon",
-                  img: "/cert2.png",
-                  desc: "Participated in the All India Women Start-a-thon and advanced to Round 2 by presenting innovative problem-solving ideas."
-                },
-                {
-                  title: "EY International Techkathon",
-                  img: "/cert3.png",
-                  desc: "Participated in the EY International Techathon and advanced to Round 2 in a competitive technical challenge."
-                },
-                {
-                  title: "International Conference IETE",
-                  img: "/conference.jpeg",
-                  desc: "Participated in an international conference conducted by IETE, gaining exposure to emerging technologies and research discussions."
-                },
-                {
-                  title: "Science Expo",
-                  img: "/scienceexpo.jpeg",
-                  desc: "Presented an Offline Voice Assistant project at a science expo, demonstrating AI and voice recognition concepts."
-                },
-                {
-                  title: "AI Agents Workshop",
-                  img: "/workshop1.jpeg",
-                  desc: "Attended an AI Agents workshop conducted by Parkqwik, exploring intelligent AI agent concepts and applications."
-                },
-                {
-                  title: "IOT Workshop",
-                  img: "/workshop2.jpeg",
-                  desc: "Completed an offline IoT workshop conducted by PanTech E-Learning with practical sensor training experience."
-                },
-                {
-                  title: "Langchain Workshop",
-                  img: "/workshop3.png",
-                  desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts."
-                }
-              ],
-              ...[
-                {
-                  title: "TNWISE Women Hackathon",
-                  img: "/cert1.jpeg",
-                  desc: "Participated in the TNWISE Women Hackathon held at Rajalakshmi Engineering College and advanced to Round 2 among shortlisted teams."
-                },
-                {
-                  title: "AIWS Women Hackathon",
-                  img: "/cert2.png",
-                  desc: "Participated in the All India Women Start-a-thon and advanced to Round 2 by presenting innovative problem-solving ideas."
-                },
-                {
-                  title: "EY International Techkathon",
-                  img: "/cert3.png",
-                  desc: "Participated in the EY International Techathon and advanced to Round 2 in a competitive technical challenge."
-                },
-                {
-                  title: "International Conference IETE",
-                  img: "/conference.jpeg",
-                  desc: "Participated in an international conference conducted by IETE, gaining exposure to emerging technologies and research discussions."
-                },
-                {
-                  title: "Science Expo",
-                  img: "/scienceexpo.jpeg",
-                  desc: "Presented an Offline Voice Assistant project at a science expo, demonstrating AI and voice recognition concepts."
-                },
-                {
-                  title: "AI Agents Workshop",
-                  img: "/workshop1.jpeg",
-                  desc: "Attended an AI Agents workshop conducted by Parkqwik, exploring intelligent AI agent concepts and applications."
-                },
-                {
-                  title: "IOT Workshop",
-                  img: "/workshop2.jpeg",
-                  desc: "Completed an offline IoT workshop conducted by PanTech E-Learning with practical sensor training experience."
-                },
-                {
-                  title: "Langchain Workshop",
-                  img: "/workshop3.png",
-                  desc: "Participated in a LangChain workshop organized by Innomatics Research Labs, exploring AI workflow and application development concepts."
-                }
-              ]].map((item, index) => (
-               <div
-  key={index}
-  className="w-[260px] sm:w-[300px] flex-shrink-0 bg-[#F8EAF2] dark:bg-[#220814] rounded-3xl shadow-lg p-4 hover:scale-105 transition duration-300"
->
-  <img
-    src={item.img}
-    alt={item.title}
-    className="w-full h-36 sm:h-48 object-contain rounded-xl mb-3 bg-white dark:bg-[#1a0810]"
-  />
-
-                  <h3 className="font-semibold text-lg mb-1">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm text-[#5A3147] dark:text-[#D9CCD4] break-words whitespace-normal">
-                    {item.desc}
-                  </p>
+              <div className={`flex items-center gap-3 px-5 pt-5 pb-4 border-b ${BORDER}`}>
+                <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+                  <img
+                    src="/Poja shri.jpeg"
+                    alt="Poja Shri"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              ))}
+                <div>
+                  <div className={`font-mono text-[11px] ${TEXT_MUTED} mb-0.5`}>
+                    row_index: 0
+                  </div>
+                  <div className="font-medium text-sm">Poja Shri J M</div>
+                </div>
+              </div>
 
+              <div className="px-5 pt-4 pb-5">
+                {(
+                  [
+                    { key: "role", val: "AI/DS student" },
+                    { key: "cgpa", val: "9.25", accent: true },
+                    { key: "focus", val: "LLMs · RAG · ML" },
+                    { key: "based_in", val: "Chennai, IN" },
+                    { key: "status", val: "open_to_work", accent: true },
+                  ] as { key: string; val: string; accent?: boolean }[]
+                ).map((row) => (
+                  <div
+                    key={row.key}
+                    className={`flex justify-between items-baseline py-2 border-b border-dashed ${BORDER} last:border-none text-sm`}
+                  >
+                    <span className={`font-mono text-[11px] uppercase tracking-wide ${TEXT_MUTED}`}>
+                      {row.key}
+                    </span>
+                    <span className={`font-medium ${row.accent ? CYAN_TEXT : TEXT_PRIMARY}`}>
+                      {row.val}
+                    </span>
+                  </div>
+                ))}
+                <span className={`inline-block font-mono text-[10px] px-2 py-1 mt-3 rounded ${PAGE_BG} border ${BORDER} ${TEXT_SECONDARY}`}>
+                  dtype: candidate_profile
+                </span>
+              </div>
             </div>
           </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-8">
+              <SectionTag label="about" />
+              About Me
+            </h2>
+
+            <div className={`relative ${CARD_BG} border ${BORDER} p-8 rounded-xl shadow-sm`}>
+              <p className={`text-lg leading-relaxed ${TEXT_SECONDARY}`}>
+                I got into AI because of a simple question:{" "}
+                <span className={`font-semibold ${TEXT_PRIMARY}`}>
+                  how can technology make life easier for people?
+                </span>
+                <br />
+                <br />
+                That question led me to build things. A system that catches
+                fake job postings before they mislead real candidates. A
+                document intelligence tool that lets anyone interrogate a PDF
+                like it&apos;s a conversation. Web apps that turn rough ideas
+                into working products.
+                <br />
+                <br />
+                I&apos;m a pre-final year AI &amp; Data Science student at
+                Jerusalem College of Engineering (CGPA 9.25), with internships
+                in NLP, data science, and frontend development. My sweet spot
+                is the intersection of language models and practical utility
+                — building AI that&apos;s actually useful, not just
+                technically impressive.
+                <br />
+                <br />
+                Currently obsessing over how LLMs handle the things they
+                don&apos;t know, and how to build systems that are honest
+                about their limits.
+              </p>
+            </div>
           </motion.div>
-          </section>
-       {/* Contact */}
-{/* Contact */}
-<section
-  id="contact"
-  className="max-w-6xl mx-auto px-4 md:px-6 py-20"
->
-<motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.8 }}
->
-  <Contact />
-</motion.div>
-</section>
+        </section>
+
+        <CyanDivider />
+
+        {/* Skills — rendered as lowercase snake_case tags, echoing the
+            dtype-tag language from the hero record card. */}
+        <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-8">
+              <SectionTag label="skills" />
+              Skills
+            </h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {skills.map((skill) => (
+                <div
+                  key={skill}
+                  className={`${CARD_BG} border ${BORDER} border-l-2 border-l-transparent hover:border-l-[#22D3EE] p-4 rounded-lg text-center font-mono text-sm ${TEXT_SECONDARY} transition-colors`}
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        <Languages />
+
+        {/* Experience */}
+        <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-8">
+              <SectionTag label="experience" />
+              Experience
+            </h2>
+            <Experience />
+          </motion.div>
+        </section>
+
+        <section className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-10">
+              <SectionTag label="education" />
+              Education
+            </h2>
+            <Education />
+          </motion.div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold mb-8">
+              <SectionTag label="projects" />
+              Projects
+            </h2>
+            <Projects />
+          </motion.div>
+        </section>
+
+        <section id="certifications" className="max-w-6xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Certifications />
+          </motion.div>
+        </section>
+
+        {/* Achievements — cards now carry an item[i] index tag, echoing the
+            hero card's row_index. Same instrument, different section. */}
+        <section id="participations" className="py-24 relative overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl text-center font-bold mb-12">
+              <SectionTag label="achievements" />
+              Achievements &amp; Participation
+            </h2>
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#EEF1F5] dark:from-[#0A1216] to-transparent z-10"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#EEF1F5] dark:from-[#0A1216] to-transparent z-10"></div>
+
+            <div className="relative overflow-hidden">
+              <div className="flex w-max gap-6 animate-marquee pause-animation">
+                {marqueeItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`relative w-[260px] sm:w-[300px] flex-shrink-0 ${CARD_BG} border ${BORDER} rounded-xl shadow-sm p-4 hover:scale-[1.03] transition duration-300`}
+                  >
+                    <span className={`font-mono text-[10px] ${CYAN_TEXT} block mb-2`}>
+                      {`item[${index % achievements.length}]`}
+                    </span>
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className={`w-full h-36 sm:h-48 object-contain rounded-lg mb-3 ${PAGE_BG}`}
+                    />
+                    <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
+                    <p className={`text-sm ${TEXT_SECONDARY} break-words whitespace-normal`}>
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="max-w-6xl mx-auto px-4 md:px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Contact />
+          </motion.div>
+        </section>
 
         {/* Footer */}
-        <footer className="text-center py-8 text-[#8B6479] dark:text-[#BDA9B6]">
+        <footer className={`text-center py-8 relative ${TEXT_MUTED} text-sm`}>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-px bg-gradient-to-r from-transparent via-[#22D3EE]/40 to-transparent" />
           Made with 🩷 by Poja Shri J M.
         </footer>
-
       </main>
-     
     </>
-     
   );
 }
