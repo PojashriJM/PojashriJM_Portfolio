@@ -57,18 +57,18 @@ style={{position:"relative",display:"flex",marginBottom:"1.5rem",opacity:visible
 <div onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-6px)";e.currentTarget.style.boxShadow="0 15px 35px rgba(34,211,238,.18)";}}
 onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow=isDark?"0 8px 25px rgba(0,0,0,.25)":"0 8px 25px rgba(34,211,238,.08)";}}
 style={{flex:1,borderRadius:20,padding:"1.4rem",background:isDark?"rgba(8,17,34,.82)":"rgba(255,255,255,.75)",backdropFilter:"blur(18px)",border:"1px solid rgba(34,211,238,.15)",borderLeft:`4px solid ${CYAN}`,transition:".3s"}}>
-<div style={{display:"flex",gap:12}}>
-<div style={{width:38,height:38,borderRadius:10,background:"rgba(34,211,238,.12)",display:"flex",alignItems:"center",justifyContent:"center"}}>
+<div style={{display:"flex",gap:12,alignItems:"flex-start"}}>
+<div style={{width:38,height:38,borderRadius:10,background:"rgba(34,211,238,.12)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
 <Icon color={CYAN2} size={18}/>
 </div>
-<div style={{flex:1}}>
+<div style={{flex:1,minWidth:0}}>
 <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
 <strong style={{color:isDark?"#67E8F9":"#0F172A"}}>{exp.role}</strong>
 {exp.active&&<span style={{fontSize:11,padding:"2px 8px",borderRadius:999,background:"rgba(34,211,238,.12)",color:CYAN2,border:"1px solid rgba(34,211,238,.2)"}}>● Active</span>}
 </div>
 <div style={{color:CYAN2,fontSize:13}}>{exp.company}</div>
 </div>
-<div style={{fontSize:11,padding:"4px 10px",borderRadius:999,background:isDark?"rgba(255,255,255,.05)":"#F8FAFC",border:"1px solid rgba(34,211,238,.15)",color:isDark?"#A5F3FC":"#0E7490"}}>{exp.date}</div>
+<div style={{fontSize:11,padding:"4px 10px",borderRadius:999,background:isDark?"rgba(255,255,255,.05)":"#F8FAFC",border:"1px solid rgba(34,211,238,.15)",color:isDark?"#A5F3FC":"#0E7490",flexShrink:0,alignSelf:"flex-start"}}>{exp.date}</div>
 </div>
 <p style={{marginTop:12,lineHeight:1.7,color:isDark?"#CFFAFE":"#475569",fontSize:13.5}}>{exp.description}</p>
 </div>

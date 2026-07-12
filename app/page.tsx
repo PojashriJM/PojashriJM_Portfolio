@@ -30,13 +30,7 @@ const CYAN_TEXT = "text-[#0E7C86] dark:text-[#22D3EE]";
 // Small monospace "code comment" tag placed before every section heading —
 // echoes the hero's `>>> whoami` prompt so the whole page reads as one
 // system instead of a themed hero bolted onto old sections.
-function SectionTag({ label }: { label: string }) {
-  return (
-    <span className={`font-mono text-xs tracking-wide ${CYAN_TEXT} mr-3 align-middle`}>
-      {`# ${label}`}
-    </span>
-  );
-}
+
 
 function CyanDivider() {
   return (
@@ -120,7 +114,7 @@ export default function Home() {
     <>
       <Navbar />
       <main className={`overflow-x-hidden w-full pt-10 min-h-screen ${PAGE_BG} ${TEXT_PRIMARY} transition-colors duration-300`}>
-        <div className="fixed top-4 right-5 z-[99999]">
+        <div className="fixed top-4 right-20 md:right-5 z-[99999]">
           <button
             onClick={() => setDarkMode(!darkMode)}
             className={`w-10 h-10 flex items-center justify-center rounded-lg ${CARD_BG} border ${BORDER} ${CYAN_TEXT} text-lg shadow-sm hover:scale-105 transition`}
@@ -253,7 +247,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              <SectionTag label="about" />
               About Me
             </h2>
 
@@ -300,7 +293,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              <SectionTag label="skills" />
               Skills
             </h2>
 
@@ -325,7 +317,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              <SectionTag label="experience" />
               Experience
             </h2>
             <Experience />
@@ -340,7 +331,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-10">
-              <SectionTag label="education" />
               Education
             </h2>
             <Education />
@@ -356,7 +346,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              <SectionTag label="projects" />
               Projects
             </h2>
             <Projects />
@@ -384,7 +373,6 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl text-center font-bold mb-12">
-              <SectionTag label="achievements" />
               Achievements &amp; Participation
             </h2>
 

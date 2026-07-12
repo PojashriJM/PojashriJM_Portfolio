@@ -164,7 +164,6 @@ export default function Certifications() {
           </span>
         </div>
         <h2 className="text-4xl font-bold text-[#12181B] dark:text-[#E7F6F8] mb-2">
-          <span className="font-mono text-xl tracking-wide text-[#0E7C86] dark:text-[#22D3EE] mr-3 align-middle"># certifications</span>
           Certifications
         </h2>
         <p className="text-sm text-[#55646C] dark:text-[#93A9AF] mb-10">

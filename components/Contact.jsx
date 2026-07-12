@@ -74,7 +74,6 @@ return (
   <section className="px-6 py-16 max-w-6xl mx-auto">
     {/* Section heading */}
     <h2 className="text-3xl md:text-4xl font-bold text-[#12181B] dark:text-[#E7F6F8] mb-12">
-      <span className="font-mono text-lg tracking-wide text-[#0E7C86] dark:text-[#22D3EE] mr-3 align-middle"># contact</span>
       Contact
     </h2>
 
