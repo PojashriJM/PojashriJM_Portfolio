@@ -41,8 +41,8 @@ const socialLinks = [
     label: "Email",
     value: "pojashrijm2006@gmail.com",
     href: "mailto:pojashrijm2006@gmail.com",
-    iconBg: "bg-pink-100 dark:bg-pink-900/40",
-    iconColor: "text-[#C43C88]",
+    iconBg: "bg-cyan-100 dark:bg-cyan-900/30",
+    iconColor: "text-[#0E7C86] dark:text-[#22D3EE]",
   },
   {
     icon: <FaGithub />,
@@ -73,21 +73,22 @@ const socialLinks = [
 return (
   <section className="px-6 py-16 max-w-6xl mx-auto">
     {/* Section heading */}
-    <h2 className="text-3xl md:text-4xl font-bold text-[#C43C88] dark:text-[#E164A8] mb-12">
+    <h2 className="text-3xl md:text-4xl font-bold text-[#12181B] dark:text-[#E7F6F8] mb-12">
+      <span className="font-mono text-lg tracking-wide text-[#0E7C86] dark:text-[#22D3EE] mr-3 align-middle"># contact</span>
       Contact
     </h2>
 
-    <div className="grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl border border-pink-100 dark:border-pink-900/30">
+    <div className="grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl border border-[rgba(18,24,27,0.10)] dark:border-[rgba(231,246,248,0.08)]">
 
       {/* ── Left Panel ── */}
-      <div className="relative bg-gradient-to-br from-pink-100 via-purple-50 to-violet-100 dark:from-[#2a0a1a] dark:via-[#1a0a2e] dark:to-[#150820] p-8 md:p-10">
+      <div className="relative bg-gradient-to-br from-cyan-50 via-sky-50 to-teal-50 dark:from-[#0A1A1E] dark:via-[#0A1620] dark:to-[#081015] p-8 md:p-10">
 
         {/* Glassmorphism inner card */}
         <div className="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-white/70 dark:border-white/10 rounded-2xl p-6 mb-6">
 
           {/* Avatar + name + status */}
           <div className="flex items-center gap-4 mb-5">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C43C88] to-[#a855f7] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0E7C86] to-[#22D3EE] flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
               PS
             </div>
             <div>
@@ -136,7 +137,7 @@ return (
       </div>
 
       {/* ── Right Panel — Form ── */}
-      <div className="bg-white dark:bg-[#1a0814] p-8 md:p-10">
+      <div className="bg-white dark:bg-[#131E24] p-8 md:p-10">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
           Send a message
         </h3>
@@ -145,9 +146,9 @@ return (
     initial={{ opacity: 0, y: -10 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0 }}
-   className="mb-4 rounded-xl border border-pink-200 dark:border-pink-800/50 bg-pink-50 dark:bg-pink-900/20 p-4"
+   className="mb-4 rounded-xl border border-cyan-200 dark:border-cyan-800/50 bg-cyan-50 dark:bg-cyan-900/20 p-4"
   >
-    <p className="text-sm text-[#C43C88] dark:text-pink-300">
+    <p className="text-sm text-[#0E7C86] dark:text-cyan-300">
       {successMessage}
     </p>
   </motion.div>
@@ -167,7 +168,7 @@ return (
                 name="from_name"
                 type="text"
                 placeholder="Your name"
-                className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C43C88]/40 focus:border-[#C43C88] transition"
+                className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/40 focus:border-[#22D3EE] transition"
               />
             </div>
             <div>
@@ -178,7 +179,7 @@ return (
                 name="from_email"
                 type="email"
                 placeholder="you@email.com"
-                className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C43C88]/40 focus:border-[#C43C88] transition"
+                className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/40 focus:border-[#22D3EE] transition"
               />
             </div>
           </div>
@@ -192,7 +193,7 @@ return (
               name="from_name"
               type="text"
               placeholder="What's this about?"
-              className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C43C88]/40 focus:border-[#C43C88] transition"
+              className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2.5 bg-gray-50 dark:bg-white/5 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/40 focus:border-[#22D3EE] transition"
             />
           </div>
 
@@ -204,14 +205,14 @@ return (
             <textarea
               name="message"
               placeholder="Write your message..."
-              className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 bg-gray-50 dark:bg-white/5 h-36 resize-none text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C43C88]/40 focus:border-[#C43C88] transition"
+              className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 bg-gray-50 dark:bg-white/5 h-36 resize-none text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/40 focus:border-[#22D3EE] transition"
             />
           </div>
 
           {/* Submit button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#C43C88] to-[#a855f7] hover:from-[#a92f73] hover:to-[#9333ea] text-white py-3 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-pink-300/40 dark:hover:shadow-pink-900/40 hover:-translate-y-0.5"
+            className="w-full bg-gradient-to-r from-[#0E7C86] to-[#22D3EE] hover:from-[#0B646C] hover:to-[#67E4F4] text-white py-3 rounded-xl font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-cyan-300/40 dark:hover:shadow-cyan-900/40 hover:-translate-y-0.5"
           >
             Send message
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

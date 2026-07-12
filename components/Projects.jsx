@@ -12,8 +12,8 @@ const projects = [
     tech: ["Python", "ML", "Flask", "HTML", "CSS", "NLP"],
     github: "https://github.com/PojashriJM/FakeJobDetection",
     live: "https://fakejobdetection.onrender.com/",
-    border: "#C43C88",
-    accent: "#e8749a",
+    border: "#0E7C86",
+    accent: "#22D3EE",
   },
   {
     id: "02",
@@ -24,8 +24,8 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Render"],
     github: "https://github.com/PojashriJM/million-dollar-instapage",
     live: "https://million-dollar-instapage.onrender.com/",
-    border: "#a855c8",
-    accent: "#c47ae8",
+    border: "#7C6AE0",
+    accent: "#A78BFA",
   },
   {
     id: "03",
@@ -79,11 +79,15 @@ export default function ProjectsSection() {
     return () => observer.disconnect();
   }, []);
 
-  const cardBg = isDark ? "#3a1228" : "#F8EAF2";
-  const cardBorder = isDark ? "rgba(196,60,136,0.2)" : "rgba(255,255,255,0.75)";
-  const textPrimary = isDark ? "#f5d0e8" : "#2d0a1e";
-  const textSecondary = isDark ? "#c490b0" : "#7a3a5a";
-  const textMuted = isDark ? "#9a6080" : "#b06090";
+  const cardBg = isDark ? "#131E24" : "#FFFFFF";
+  const cardBorder = isDark ? "rgba(231,246,248,0.08)" : "rgba(18,24,27,0.08)";
+  const textPrimary = isDark ? "#E7F6F8" : "#12181B";
+  const textSecondary = isDark ? "#93A9AF" : "#55646C";
+  const textMuted = isDark ? "#5C6F76" : "#8896A0";
+  const dividerColor = isDark ? "rgba(231,246,248,0.08)" : "rgba(18,24,27,0.08)";
+  const ghostAccentBg = isDark ? "rgba(34,211,238,0.14)" : "rgba(14,124,134,0.10)";
+  const ghostAccentColor = isDark ? "#22D3EE" : "#0E7C86";
+  const ghostAccentBorder = isDark ? "rgba(34,211,238,0.28)" : "rgba(14,124,134,0.22)";
 
   return (
     <div style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
@@ -115,7 +119,7 @@ export default function ProjectsSection() {
                 transition: "transform 0.25s ease, box-shadow 0.25s ease",
                 transform: isHovered ? "translateY(-4px)" : "translateY(0)",
                 boxShadow: isHovered
-                  ? `0 16px 40px rgba(196,60,136,0.12), 0 4px 12px rgba(0,0,0,0.06)`
+                  ? `0 16px 40px rgba(34,211,238,0.10), 0 4px 12px rgba(0,0,0,0.06)`
                   : "0 2px 8px rgba(0,0,0,0.04)",
               }}
             >
@@ -127,8 +131,9 @@ export default function ProjectsSection() {
                   top: 8,
                   fontSize: 68,
                   fontWeight: 900,
+                  fontFamily: "monospace",
                   color: p.border,
-                  opacity: isHovered ? 0.08 : 0.04,
+                  opacity: isHovered ? 0.10 : 0.05,
                   lineHeight: 1,
                   letterSpacing: "-0.04em",
                   userSelect: "none",
@@ -171,11 +176,9 @@ export default function ProjectsSection() {
         width: 30,
         height: 30,
         borderRadius: 8,
-        background: isDark
-          ? "rgba(196,60,136,0.12)"
-          : "rgba(196,60,136,0.08)",
-        color: "#C43C88",
-        border: "1px solid rgba(196,60,136,0.2)",
+        background: ghostAccentBg,
+        color: ghostAccentColor,
+        border: `1px solid ${ghostAccentBorder}`,
         textDecoration: "none",
       }}
     >
@@ -208,7 +211,7 @@ export default function ProjectsSection() {
                 </div>
 
               {/* Divider */}
-              <div style={{ height: 1, background: isDark ? "rgba(196,60,136,0.12)" : "rgba(196,60,136,0.1)", margin: "14px 0" }} />
+              <div style={{ height: 1, background: dividerColor, margin: "14px 0" }} />
 
               {/* Description */}
               <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.75, color: textSecondary }}>
@@ -222,10 +225,11 @@ export default function ProjectsSection() {
                     key={t}
                     style={{
                       fontSize: 10.5, fontWeight: 600, letterSpacing: "0.04em",
-                      padding: "3px 9px", borderRadius: 20,
-                      background: isDark ? "rgba(255,255,255,0.05)" : "rgba(196,60,136,0.07)",
+                      fontFamily: "monospace",
+                      padding: "3px 9px", borderRadius: 6,
+                      background: isDark ? "rgba(255,255,255,0.04)" : "rgba(14,124,134,0.06)",
                       color: textMuted,
-                      border: "1px solid rgba(196,60,136,0.15)",
+                      border: `1px solid ${isDark ? "rgba(34,211,238,0.15)" : "rgba(14,124,134,0.15)"}`,
                     }}
                   >
                     {t}
