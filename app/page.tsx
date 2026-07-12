@@ -16,7 +16,6 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
-
 // Shared design tokens (cyan/ink system) used as class strings below so
 // every section pulls from the same palette instead of one-off hex values.
 const PAGE_BG = "bg-[#EEF1F5] dark:bg-[#0A1216]";
