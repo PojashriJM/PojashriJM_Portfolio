@@ -127,16 +127,6 @@ export default function Home() {
             as row_index 0 of a dataframe, small avatar chip instead of a
             large photo, mono field labels. No blobs, no big portrait. */}
         <section id="home" className="relative max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
-          <div
-            className="absolute inset-0 pointer-events-none opacity-60 dark:opacity-40"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(18,24,27,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(18,24,27,0.05) 1px, transparent 1px)",
-              backgroundSize: "48px 48px",
-              maskImage: "linear-gradient(to bottom, black, transparent 80%)",
-              WebkitMaskImage: "linear-gradient(to bottom, black, transparent 80%)",
-            }}
-          />
 
           <div className="relative grid md:grid-cols-[1fr_340px] gap-12 md:gap-16 items-start">
             {/* Left: text */}

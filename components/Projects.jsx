@@ -13,7 +13,7 @@ const projects = [
     github: "https://github.com/PojashriJM/FakeJobDetection",
     live: "https://fakejobdetection.onrender.com/",
     border: "#0E7C86",
-    accent: "#22D3EE",
+    accent: "#0e7c86",
   },
   {
     id: "02",
@@ -24,8 +24,8 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "Node.js", "Render"],
     github: "https://github.com/PojashriJM/million-dollar-instapage",
     live: "https://million-dollar-instapage.onrender.com/",
-    border: "#7C6AE0",
-    accent: "#A78BFA",
+    border: "#059986",
+    accent: "#059986",
   },
   {
     id: "03",
@@ -36,8 +36,8 @@ const projects = [
     tech: ["Groq", "Next.js", "React", "Typescript", "RAG"],
     github: "https://github.com/PojashriJM/DocMindAI",
     live: "https://doc-mind-ai-iota.vercel.app/",
-    border: "#e06b6b",
-    accent: "#e89090",
+    border: "#037c5f",
+    accent: "#037c5f",
   },
   {
     id: "04",
@@ -46,8 +46,8 @@ const projects = [
    description:
   "An AI-powered smart shoe designed to assist visually impaired individuals with safer and more independent navigation. The system combines ultrasonic sensors, ESP32, and intelligent obstacle detection to identify nearby objects and provide real-time alerts through vibration and audio feedback. Built with a companion mobile application for location tracking and emergency assistance.",
    tech: ["Arduino uno", "ESP32", "React", "Flutter", "Sensors"],
-    border: "#5b8de8",
-    accent: "#7aaaf0",
+    border: "#037c6e",
+    accent: "#037c6e",
      hideLinks: true,
   },
 ];

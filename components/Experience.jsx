@@ -66,9 +66,11 @@ style={{flex:1,borderRadius:20,padding:"1.4rem",background:isDark?"rgba(8,17,34,
 <strong style={{color:isDark?"#67E8F9":"#0F172A"}}>{exp.role}</strong>
 {exp.active&&<span style={{fontSize:11,padding:"2px 8px",borderRadius:999,background:"rgba(34,211,238,.12)",color:CYAN2,border:"1px solid rgba(34,211,238,.2)"}}>● Active</span>}
 </div>
-<div style={{color:CYAN2,fontSize:13}}>{exp.company}</div>
+<div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap",marginTop:4}}>
+<span style={{color:CYAN2,fontSize:13}}>{exp.company}</span>
+<span style={{fontSize:11,padding:"4px 10px",borderRadius:999,background:isDark?"rgba(255,255,255,.05)":"#F8FAFC",border:"1px solid rgba(34,211,238,.15)",color:isDark?"#A5F3FC":"#0E7490",flexShrink:0}}>{exp.date}</span>
 </div>
-<div style={{fontSize:11,padding:"4px 10px",borderRadius:999,background:isDark?"rgba(255,255,255,.05)":"#F8FAFC",border:"1px solid rgba(34,211,238,.15)",color:isDark?"#A5F3FC":"#0E7490",flexShrink:0,alignSelf:"flex-start"}}>{exp.date}</div>
+</div>
 </div>
 <p style={{marginTop:12,lineHeight:1.7,color:isDark?"#CFFAFE":"#475569",fontSize:13.5}}>{exp.description}</p>
 </div>
