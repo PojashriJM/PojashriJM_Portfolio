@@ -184,9 +184,9 @@ export default function Home() {
               <div className={`flex items-center gap-3 px-5 pt-5 pb-4 border-b ${BORDER}`}>
                 <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
                   <img
-                    src="/Poja shri.jpeg"
+                    src="/Poja shri.png"
                     alt="Poja Shri"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover border border-[rgba(18,24,27,0.50)] dark:border-[rgba(231,246,248,0.50)] rounded-lg"
                   />
                 </div>
                 <div>
