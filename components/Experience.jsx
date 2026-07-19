@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { FaCodeBranch, FaBrain, FaCode, FaChartLine } from "react-icons/fa";
 
 const experiences = [
-  {id:1,role:"Open Source Contributor",company:"GirlScript Summer of Code",date:"May 2026 – Present",description:"Merged 5 PRs across AI Agents track repositories, building skeleton UIs, dark/light mode toggles, README generator and pagination components.",icon:FaCodeBranch,active:true},
-  {id:2,role:"AI & DS Intern",company:"Zeptoware Systems",date:"Dec 2025 – Jan 2026",description:"Engineered a Fake Job Detection System using NLP pipelines, embeddings and ensemble ML models.",icon:FaBrain},
-  {id:3,role:"Frontend Developer Intern",company:"Parkqwik Pvt. Ltd.",date:"Jun 2025 – Jul 2025",description:"Designed responsive UI components from Figma with accessibility and cross-browser support.",icon:FaCode},
-  {id:4,role:"Data Science Intern",company:"Nexila Technologies",date:"Dec 2024 – Jan 2025",description:"Built predictive analytics pipelines using Python and Scikit-learn.",icon:FaChartLine},
+  {id:1,role:"Open Source Contributor",company:"GirlScript Summer of Code",date:"May 2026 – Present",badge:"Remote",description:"Merged 5 PRs across AI Agents track repositories, building skeleton UIs, dark/light mode toggles, README generator and pagination components.",icon:FaCodeBranch,active:true},
+  {id:2,role:"AI & DS Intern",company:"Zeptoware Systems",date:"Dec 2025 – Jan 2026",badge:"On-site",description:"Engineered a Fake Job Detection System using NLP pipelines, embeddings and ensemble ML models.",icon:FaBrain},
+  {id:3,role:"Frontend Developer Intern",company:"Parkqwik Pvt. Ltd.",date:"Jun 2025 – Jul 2025",badge:"Remote",description:"Designed responsive UI components from Figma with accessibility and cross-browser support.",icon:FaCode},
+  {id:4,role:"Data Science Intern",company:"Nexila Technologies",date:"Dec 2024 – Jan 2025",badge:"On-site",description:"Built predictive analytics pipelines using Python and Scikit-learn.",icon:FaChartLine},
 ];
 
 const CYAN="#22D3EE";
@@ -65,6 +65,7 @@ style={{flex:1,borderRadius:20,padding:"1.4rem",background:isDark?"rgba(8,17,34,
 <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
 <strong style={{color:isDark?"#67E8F9":"#0F172A"}}>{exp.role}</strong>
 {exp.active&&<span style={{fontSize:11,padding:"2px 8px",borderRadius:999,background:"rgba(34,211,238,.12)",color:CYAN2,border:"1px solid rgba(34,211,238,.2)"}}>● Active</span>}
+{exp.badge&&<span style={{fontSize:11,padding:"2px 8px",borderRadius:999,background:"rgba(34,211,238,.12)",color:CYAN2,border:"1px solid rgba(34,211,238,.2)"}}>{exp.badge}</span>}
 </div>
 <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap",marginTop:4}}>
 <span style={{color:CYAN2,fontSize:13}}>{exp.company}</span>
