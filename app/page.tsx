@@ -58,7 +58,7 @@ export default function Home() {
     "javascript",
     "react",
     "html",
-    "tailwind_css",
+    "OpenCV",
     "github",
     "firebase",
     "cassandra",
