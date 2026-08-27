@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Poja Shri J M | AI & Data Science Portfolio",
   description: "AI & Data Science Student | NLP, Machine Learning, and Full Stack Development",
+   verification: {
+    google: "HMrDp_Hi7J_jyZ9bLzdwcuRuiFT81FDGYmmX2TK2ndQ",
+  },
 };
 
 export default function RootLayout({

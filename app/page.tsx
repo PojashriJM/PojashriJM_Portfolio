@@ -29,11 +29,7 @@ const CYAN_TEXT = "text-[#0E7C86] dark:text-[#22D3EE]";
 // Small monospace "code comment" tag placed before every section heading —
 // echoes the hero's `>>> whoami` prompt so the whole page reads as one
 // system instead of a themed hero bolted onto old sections.
-export const metadata = {
-  verification: {
-    google: "HMrDp_Hi7J_jyZ9bLzdwcuRuiFT81FDGYmmX2TK2ndQ",
-  },
-};
+
 
 function CyanDivider() {
   return (
