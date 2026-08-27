@@ -31,7 +31,7 @@ const CYAN_TEXT = "text-[#0E7C86] dark:text-[#22D3EE]";
 // system instead of a themed hero bolted onto old sections.
 export const metadata = {
   verification: {
-    google: <meta name="google-site-verification" content="HMrDp_Hi7J_jyZ9bLzdwcuRuiFT81FDGYmmX2TK2ndQ" />,
+    google: "HMrDp_Hi7J_jyZ9bLzdwcuRuiFT81FDGYmmX2TK2ndQ",
   },
 };
 
