@@ -201,7 +201,7 @@ export default function Home() {
                 {(
                   [
                     { key: "role", val: "AI/DS student" },
-                    { key: "cgpa", val: "9.25", accent: true },
+                    { key: "cgpa", val: "9.2", accent: true },
                     { key: "focus", val: "LLMs · RAG · ML" },
                     { key: "based_in", val: "Chennai, IN" },
                     { key: "status", val: "open_to_work", accent: true },
