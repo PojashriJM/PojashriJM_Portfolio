@@ -255,7 +255,7 @@ export default function Home() {
                 <br />
                 <br />
                 I&apos;m a pre-final year AI &amp; Data Science student at
-                Jerusalem College of Engineering (CGPA 9.25), with internships
+                Jerusalem College of Engineering (CGPA 9.2), with internships
                 in NLP, data science, and frontend development. My sweet spot
                 is the intersection of language models and practical utility
                 — building AI that&apos;s actually useful, not just
