@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { FaCodeBranch, FaBrain, FaCode, FaChartLine } from "react-icons/fa";
 import { MdLocalAirport } from "react-icons/md";
 const experiences = [
-  {id:1,role:"Technical intern",company:"Airport Authority of India.",date:"July 2026 – Present",badge:"On-site (Chennai, India)",description:"Learnt about airport operations and safety protocols.",icon:MdLocalAirport,active:true},
-  {id:2,role:"Open Source Contributor",company:"GirlScript Summer of Code",date:"May 2026 – Present",badge:"Remote",description:"Merged 5 PRs across AI Agents track repositories, building skeleton UIs, dark/light mode toggles, README generator and pagination components.",icon:FaCodeBranch,active:true},
+  {id:1,role:"Technical intern",company:"Airport Authority of India.",date:"July 2026 (15 days)",badge:"On-site (Chennai, India)",description:"Learnt about airport operations and safety protocols.",icon:MdLocalAirport,active:true},
+  {id:2,role:"Open Source Contributor",company:"GirlScript Summer of Code",date:"May 2026 – August 2026",badge:"Remote",description:"Merged 5 PRs across AI Agents track repositories, building skeleton UIs, dark/light mode toggles, README generator and pagination components.",icon:FaCodeBranch,active:true},
   {id:3,role:"AI & DS Intern",company:"Zeptoware Systems Pvt. Ltd.",date:"Dec 2025 – Jan 2026",badge:"On-site (Chennai, India)",description:"Engineered a Fake Job Detection System using NLP pipelines, embeddings and ensemble ML models.",icon:FaBrain},
   {id:4,role:"Frontend Developer Intern",company:"Parkqwik Pvt. Ltd.",date:"Jun 2025 – Jul 2025",badge:"Remote",description:"Designed responsive UI components from Figma with accessibility and cross-browser support.",icon:FaCode},
 ];
