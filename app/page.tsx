@@ -254,7 +254,7 @@ export default function Home() {
                 into working products.
                 <br />
                 <br />
-                I&apos;m a pre-final year AI &amp; Data Science student at
+                I&apos;m a final year AI &amp; Data Science student at
                 Jerusalem College of Engineering (CGPA 9.2), with internships
                 in NLP, data science, and frontend development. My sweet spot
                 is the intersection of language models and practical utility
