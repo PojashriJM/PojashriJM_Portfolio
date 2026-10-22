@@ -228,7 +228,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="about" className="max-w-6xl mx-auto px-6 py-20">
+        <section id="my-story" className="max-w-6xl mx-auto px-6 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -236,35 +236,30 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              About Me
+              My Journey Into the Future
             </h2>
 
             <div className={`relative ${CARD_BG} border ${BORDER} p-8 rounded-xl shadow-sm`}>
               <p className={`text-lg leading-relaxed ${TEXT_SECONDARY}`}>
-                I got into AI because of a simple question:{" "}
+                Flying cars are becoming a reality, and {" "}
                 <span className={`font-semibold ${TEXT_PRIMARY}`}>
-                  how can technology make life easier for people?
+                  I haven't even landed my first job yet!
                 </span>
                 <br />
                 <br />
-                That question led me to build things. A system that catches
-                fake job postings before they mislead real candidates. A
-                document intelligence tool that lets anyone interrogate a PDF
-                like it&apos;s a conversation. Web apps that turn rough ideas
-                into working products.
+                Technology never stops surprising us. As an AI & Data Science student, I want to create that same sense of amazement through my problem-solving skills, curiosity, and ability to turn ideas into practical solutions.
                 <br />
                 <br />
-                I&apos;m a final year AI &amp; Data Science student at
-                Jerusalem College of Engineering (CGPA 9.2), with internships
-                in NLP, data science, and frontend development. My sweet spot
-                is the intersection of language models and practical utility
-                — building AI that&apos;s actually useful, not just
-                technically impressive.
+                I'm an optimistic explorer who believes that every opportunity is a chance to learn, build, and make a difference. All it takes is one {" "}
+                 <span className={`font-semibold ${TEXT_PRIMARY}`}>
+                  opportunity 
+                </span> to show what {" "}
+                  <span className={`font-semibold ${TEXT_PRIMARY}`}>
+                   I'm capable of.
+                </span>
                 <br />
                 <br />
-                Currently obsessing over how LLMs handle the things they
-                don&apos;t know, and how to build systems that are honest
-                about their limits.
+                Curious to know more about me? Explore my certifications, achievements, and internship experiences below.
               </p>
             </div>
           </motion.div>
