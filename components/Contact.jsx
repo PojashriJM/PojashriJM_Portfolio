@@ -298,7 +298,7 @@ export default function Contact() {
                 name="message"
                 placeholder="Write your message..."
                 required
-                minLength={10}
+                minLength={3}
                 maxLength={5000}
                 className="w-full border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 bg-gray-50 dark:bg-white/5 h-36 resize-none text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/40 focus:border-[#22D3EE] transition"
               />
