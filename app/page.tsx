@@ -50,20 +50,32 @@ export default function Home() {
     }
   }, [darkMode]);
 
-  const skills = [
-    "python",
-    "machine_learning",
-    "sql",
-    "java",
-    "javascript",
-    "react",
-    "html",
-    "OpenCV",
-    "github",
-    "firebase",
-    "cassandra",
-    "langchain",
-  ];
+  const skillCategories = [
+  {
+    category: "AI, Machine Learning & Agents",
+    skills: ["Machine Learning", "LangChain", "MCP", "OpenCV"],
+  },
+  {
+    category: "Programming Languages",
+    skills: ["Python", "Java", "JavaScript", "SQL"],
+  },
+  {
+    category: "Backend, APIs & Security",
+    skills: ["FastAPI", "JWT"],
+  },
+  {
+    category: "Frontend & Web",
+    skills: ["React", "HTML"],
+  },
+  {
+    category: "Databases & Cloud",
+    skills: ["PostgreSQL", "MySQL", "Cassandra", "Firebase"],
+  },
+  {
+    category: "Developer Tools",
+    skills: ["GitHub"],
+  },
+];
 
   const achievements = [
     {
@@ -286,28 +298,41 @@ export default function Home() {
         {/* Skills — rendered as lowercase snake_case tags, echoing the
             dtype-tag language from the hero record card. */}
         <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-8">
-              Skills
-            </h2>
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.8 }}
+  >
+    <h2 className="text-4xl font-bold mb-10">Skills</h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {skills.map((skill) => (
-                <div
-                  key={skill}
-                  className={`${CARD_BG} border ${BORDER} border-l-2 border-l-transparent hover:border-l-[#22D3EE] p-4 rounded-lg text-center font-mono text-sm ${TEXT_SECONDARY} transition-colors`}
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {skillCategories.map((group) => (
+        <div
+          key={group.category}
+          className={`${CARD_BG} border ${BORDER} p-6 rounded-xl shadow-sm`}
+        >
+          <h3
+            className={`text-xs font-mono uppercase tracking-wider mb-4 ${TEXT_PRIMARY}`}
+          >
+            {group.category}
+          </h3>
+
+          <div className="flex flex-wrap gap-2.5">
+            {group.skills.map((skill) => (
+              <span
+                key={skill}
+                className={`${CARD_BG} border ${BORDER} border-l-2 border-l-transparent hover:border-l-[#22D3EE] px-3.5 py-2 rounded-lg font-mono text-sm ${TEXT_SECONDARY} transition-colors`}
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </motion.div>
+</section>
         {/* Experience */}
         <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
           <motion.div
