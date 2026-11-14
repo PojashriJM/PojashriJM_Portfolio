@@ -228,7 +228,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="my-story" className="max-w-6xl mx-auto px-6 py-20">
+        <section id="about" className="max-w-6xl mx-auto px-6 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -236,32 +236,48 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-8">
-              My Journey Into the Future
+              About Me
             </h2>
 
             <div className={`relative ${CARD_BG} border ${BORDER} p-8 rounded-xl shadow-sm`}>
-              <p className={`text-lg leading-relaxed ${TEXT_SECONDARY}`}>
-                Flying cars are becoming a reality, and {" "}
-                <span className={`font-semibold ${TEXT_PRIMARY}`}>
-                  I haven't even landed my first job yet!
-                </span>
-                <br />
-                <br />
-                Technology never stops surprising us. As an AI & Data Science student, I want to create that same sense of amazement through my problem-solving skills, curiosity, and ability to turn ideas into practical solutions.
-                <br />
-                <br />
-                I'm an optimistic explorer who believes that every opportunity is a chance to learn, build, and make a difference. All it takes is one {" "}
-                 <span className={`font-semibold ${TEXT_PRIMARY}`}>
-                  opportunity 
-                </span> to show what {" "}
-                  <span className={`font-semibold ${TEXT_PRIMARY}`}>
-                   I'm capable of.
-                </span>
-                <br />
-                <br />
-                Curious to know more about me? Explore my certifications, achievements, and internship experiences below.
-              </p>
-            </div>
+  <div className={`space-y-4 text-lg leading-relaxed ${TEXT_SECONDARY}`}>
+    <p>
+      <span className={`font-semibold ${TEXT_PRIMARY}`}>
+        Always building, always learning.
+      </span>{" "}
+      Technology moves fast—and as a final-year AI &amp; Data Science student,
+      I’ve made it my habit not just to keep up, but to{" "}
+      <span className={`font-semibold ${TEXT_PRIMARY}`}>
+        build along the way.
+      </span>
+    </p>
+
+    <p>
+      What excites me most about AI and software engineering is turning{" "}
+      <span className={`font-semibold ${TEXT_PRIMARY}`}>
+        messy, real-world challenges into simple, helpful tools.
+      </span>{" "}
+      From reducing false positives in job-scam detection to creating cited
+      document intelligence systems and IoT-powered assistive wearables, I love
+      taking ideas from a rough sketch to a{" "}
+      <span className={`font-semibold ${TEXT_PRIMARY}`}>live product.</span>
+    </p>
+
+    <p>
+      Every internship, hackathon, and open-source pull request has sharpened how
+      I think and collaborate. Now, I’m ready to bring that same{" "}
+      <span className={`font-semibold ${TEXT_PRIMARY}`}>
+        energy, curiosity, and ownership
+      </span>{" "}
+      to a full-time engineering team.
+    </p>
+
+    <p className="pt-2 text-base">
+      Curious to know more about my work? Explore my certifications,
+      achievements, and internship experiences below.
+    </p>
+  </div>
+</div>
           </motion.div>
         </section>
 

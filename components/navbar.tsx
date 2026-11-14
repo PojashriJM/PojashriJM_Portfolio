@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const navLinks = [
     "Home",
-    "My Story",
+    "About",
     "Skills",
     "Projects",
     "Experience",
@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const sectionIds: Record<string, string> = {
     Home: "home",
-    "My Story": "my-story",
+    About: "about",
     Skills: "skills",
     Projects: "projects",
     Experience: "experience",
