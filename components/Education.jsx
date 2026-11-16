@@ -57,7 +57,7 @@ const educationData = [
     degree: "SSLC",
     institution: "Rajkumar Sulochana Mat. Hr. Sec. School",
     year: "2021 · Chennai",
-    score: "94%",
+    score: "All Pass",
     accentLight: "#2DD4BF",
     accentDark: "#14B8A6",
     tags: [
